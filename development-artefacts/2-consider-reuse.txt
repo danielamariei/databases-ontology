@@ -1,0 +1,18 @@
+Resources: 
+	* A Semantic Web Primer
+	* Ontology Development 101: A Guide to Creating Your First Ontology: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+
+Existing concepts that relate to our domain:
+	* http://dbpedia.org/ontology/Database
+	* http://dbpedia.org/page/Database
+	* http://dbpedia.org/page/Category:Databases
+	* http://mappings.dbpedia.org/server/ontology/classes/Database
+	* http://dbpedia.org/class/yago/WikicatDatabaseManagementSystems
+	* http://dbpedia.org/class/yago/DatabaseManagementSystem106588785
+	* http://dbpedia.org/page/Relational_model
+	* http://dbpedia.org/page/Open_Software_License
+	* http://dbpedia.org/class/yago/License106549661
+	* http://dbpedia.org/page/Apache_License
+	* http://dbpedia.org/page/Replication_(computing)
+	* http://dbpedia.org/ontology/developer
+	

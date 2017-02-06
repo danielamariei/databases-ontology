@@ -1,0 +1,42 @@
+Resources: 
+	* A Semantic Web Primer
+	* Ontology Development 101: A Guide to Creating Your First Ontology: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+
+An ontology is a model for a particular domain. What should be included in the 
+ontology should be determined according to how the ontology will be used.
+
+Basic qustions that need to be answered at this stage:
+
+1. What is the domain that the ontology will cover?
+	
+	The domain of the ontology is that of databases and related concepts like 
+	the following:
+		* data models;
+		* storage models;
+		* transactions;
+		* replication mechanisms;
+		* licensing;
+		* etc.
+	
+2. For what are we going to use the ontology?
+	
+	We plan to use this ontology for applications that suggest optimal databases
+	recommendations to use, subject to certain constraints (e.g., scalability 
+	requirements, paritioning support, required data model, etc.).
+
+3. For what types of questions should the ontology provide answers?
+	
+	* Which database characteristics should I consider when choosing a database?
+	* What is the data model of a particular database?
+	* Is MongoDB a suitable database for creating an application using the 
+	  Java programming language?
+	* Is MongoDB a suitable database for creating an application that stores 
+	  Petabytes of data?
+	* What is the best choice of data model for a particular application?
+	* Which characteristics of a databse affect its appropriatness for a 
+	  particular type of application?
+	* Under what circumstances we see a change in the performance of a database?  
+	
+4. Who will use and maintain the ontology?
+
+	* At first, the author. With time, a community.
