@@ -23,7 +23,20 @@
                                                     dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
                                                     dc:creator "Daniel Amariei"@en ;
                                                     dc:contributor "Ioana Bîrsan"@en .
-
-:Oracle a :RelationalDatabase .
+:Cassandra rdf:type owl:NamedIndividual .
+:Cassandra rdf:type :RelationalDatabase ;
+	rdfs:label "Cassandra Label"@en ;
+	rdfs:comment "Test comment for Cassandra"@en .
+	
+:Oracle rdf:type owl:NamedIndividual .
+:Oracle rdf:type :RelationalDatabase ;
+	rdfs:label "Oracle Label"@en ;
+	rdfs:comment "Test comment for oracle"@en .
+:Oracle2 rdf:type owl:NamedIndividual .
+:Oracle2 rdf:type :RelationalDatabase ;
+	rdfs:label "Oracle2 Label"@en ;
+	rdfs:comment "Test comment for oracle"@en ;
+	owl:sameAs :Oracle .
+	
 
 

@@ -12,26 +12,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
-@base <http://www.semanticweb.org/ontologies/databases/> .
+@base <http://www.semanticweb.org/ontologies/databases/abox> .
 
-<http://www.semanticweb.org/ontologies/databases/> rdf:type owl:Ontology ;
-		owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/tbox/databases-ontology.ttl> ;
-                                                    dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
-                                                    rdfs:label "Databases Ontology"@en ;
-                                                    dc:title "Databases Ontology"@en ;
-                                                    dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-													rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
-                                                    dc:creator "Daniel Amariei"@en ;
-                                                    dc:contributor "Ioana Bîrsan"@en .
+<http://www.semanticweb.org/ontologies/databases/abox> rdf:type owl:Ontology ;
+                                                        owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl> ;
+                                                        dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
+                                                        rdfs:label "Databases Ontology"@en ;
+                                                        rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                        dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
+                                                        dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                        dc:title "Databases Ontology"@en ;
+                                                        dc:creator "Daniel Amariei"@en ;
+                                                        dc:contributor "Ioana Bîrsan"@en .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/Test
+###  http://www.semanticweb.org/ontologies/databases/RelationalDatabase
 :RelationalDatabase rdf:type owl:Class .
-:Oracle a :RelationalDatabase .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Test
+:Test rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Test2

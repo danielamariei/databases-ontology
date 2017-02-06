@@ -14,11 +14,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:sioc="http://rdfs.org/sioc/ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/databases/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/databases/abox">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl"/>
         <dc:bibliographicCitation xml:lang="en">***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII.</dc:bibliographicCitation>
         <rdfs:label xml:lang="en">Databases Ontology</rdfs:label>
         <rdfs:comment xml:lang="en">The purpose of this ontology is to create the common conceptual framework for &apos;talking&apos; about databases and/or related concepts.</rdfs:comment>
         <dc:bibliographicCitation xml:lang="en">***, W3C, http://www.w3.org/2001/sw/</dc:bibliographicCitation>
+        <dc:description xml:lang="en">The purpose of this ontology is to create the common conceptual framework for &apos;talking&apos; about databases and/or related concepts.</dc:description>
+        <dc:title xml:lang="en">Databases Ontology</dc:title>
         <dc:creator xml:lang="en">Daniel Amariei</dc:creator>
         <dc:contributor xml:lang="en">Ioana Bîrsan</dc:contributor>
     </owl:Ontology>
@@ -33,6 +36,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/databases/RelationalDatabase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/databases/RelationalDatabase"/>
     
 
 
