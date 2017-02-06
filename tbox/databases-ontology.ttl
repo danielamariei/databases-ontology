@@ -17,7 +17,8 @@
 <http://www.semanticweb.org/ontologies/databases/> rdf:type owl:Ontology ;
                                                     dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
                                                     rdfs:label "Databases Ontology"@en ;
-                                                    rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                    dc:decription "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+													rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
                                                     dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
                                                     dc:creator "Daniel Amariei"@en ;
                                                     dc:contributor "Ioana Bîrsan"@en .
