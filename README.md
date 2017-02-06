@@ -1,7 +1,7 @@
 # Databases Ontology
 
 ### Introduction
-The purpose of this project it to create an ontology for databases and related concepts. This should provide a common
+The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts. This should provide a common
 vocabulary for this domain.
 
 ### Repository Structure
