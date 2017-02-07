@@ -1,0 +1,91 @@
+Resources: 
+	* A Semantic Web Primer
+	* Ontology Development 101: A Guide to Creating Your First Ontology: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+	* Web Application Development: http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html
+
+Taxonomy	
+	Database
+	DatabaseManagementSystem
+		DistributedDBMS
+		RelationalDBMS
+		KeyValueDBMS
+		ColumnFamilyDBMS
+		DocumentDBMS
+		SemistructuredDBMS
+		GraphDBMS
+			TripleDBMS
+		MultivalueDBMS
+		InMemoryDBMS
+		OnDiskDBMS
+	DataModel
+		RelationalDataModel
+		KeyValueDataModel
+		ColumnFamilyDataModel
+		DocumentDataModel
+		SemistructuredDataModel
+		GraphDataModel
+		ObjectOrientedDataModel
+		MultivalueDataModel
+	StorageTechnology
+		InMemoryStorage
+		OnDiskStorage
+	MapReduce
+	Trigger
+	ServerSideScript
+	Consistency
+	ConsistencyModel
+		EventualConsistency
+		StrongConsistency
+		ConfigurableConsistency
+	Concurrency
+	ConcurrencyControlMechanism
+	StorageModel
+		RowOriented
+		ColumnOriented
+	SoftwareProduct
+	DataProcessingModel
+		BatchProcessing
+		StreamProcessing
+	Durability
+	Lincese
+		SoftwareLicense
+	Replication
+	ReplicationFactor
+	ReplicationProtocol
+		MasterSlaveEagerReplication
+		MasterSlaveLazyReplication
+		PeerToPeerEagerReplication
+		PeerToPeerLazyReplication
+	ReplicationConfigurationStrategy
+		MasterSlaveReplication
+		PeerToPeerReplication
+	ReplicationSynchronizationStrategy
+		AsynchronousReplication
+		SynchronousReplication
+	DataPartitioning
+	DataPartitioningStrategy
+		ListPartitioning
+		RangePartitioning
+		HashPartitioning
+	Schema
+	FlexibleSchema
+	RigidSchema
+	Caching
+	
+Concepts
+	ACID
+	BASE
+	
+Properties
+	hasLicense
+	hasDeveloper
+	hasWebsite
+	hasInitialRelease
+	hasCurrentRelease
+	supportsOperatingSystem
+	supportsPlatform
+	isPlatformIndependent
+	isOperatingSystemIndependent
+	supportsProgrammingLanguage
+	supportsQueryLanguage
+	
