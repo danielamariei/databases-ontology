@@ -45,7 +45,7 @@ Concepts
 	StreamProcessing
 	Concurrency
 	Durability
-	Lincese
+	License
 	SoftwareLicense
 	Replication
 	ReplicationFactor

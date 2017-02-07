@@ -21,6 +21,7 @@ Taxonomy
 	StorageTechnology
 	MapReduce
 	Trigger
+	ServerSideScript
 	Consistency
 	ConsistencyModel
 	Concurrency
@@ -29,7 +30,7 @@ Taxonomy
 	SoftwareProduct
 	DataProcessingModel
 	Durability
-	License
+	Lincese
 		SoftwareLicense
 	Replication
 	ReplicationFactor
