@@ -12,33 +12,193 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
-@base <http://www.semanticweb.org/ontologies/databases/abox> .
+@base <http://www.semanticweb.org/ontologies/databases/> .
 
-<http://www.semanticweb.org/ontologies/databases/abox> rdf:type owl:Ontology ;
-                                                        owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl> ;
-                                                        dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
-                                                        rdfs:label "Databases Ontology"@en ;
-                                                        rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                        dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
-                                                        dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                        dc:title "Databases Ontology"@en ;
-                                                        dc:creator "Daniel Amariei"@en ;
-                                                        dc:contributor "Ioana Bîrsan"@en .
+<http://www.semanticweb.org/ontologies/databases/> rdf:type owl:Ontology ;
+                                                    dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
+                                                    rdfs:label "Databases Ontology"@en ;
+                                                    rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
+                                                    dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                    dc:title "Databases Ontology"@en ;
+                                                    dc:creator "Daniel Amariei"@en ;
+                                                    dc:contributor "Ioana Bîrsan"@en .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/RelationalDatabase
-:RelationalDatabase rdf:type owl:Class .
+###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
+:AsynchronousReplicationProtocol rdf:type owl:Class ;
+                                 rdfs:subClassOf :ReplicationProtocol .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Test
-:Test rdf:type owl:Class .
+###  http://www.semanticweb.org/ontologies/databases/Caching
+:Caching rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Test2
-:Test2 rdf:type owl:Class .
+###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDBMS
+:ColumnFamilyDBMS rdf:type owl:Class ;
+                  rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Concurrency
+:Concurrency rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ConcurrencyControlMechanism
+:ConcurrencyControlMechanism rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Consistency
+:Consistency rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ConsistencyModel
+:ConsistencyModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DataModel
+:DataModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DataPartitioning
+:DataPartitioning rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DataProcessingModel
+:DataProcessingModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Database
+:Database rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DatabaseManagementSystem
+:DatabaseManagementSystem rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DistributedDBMS
+:DistributedDBMS rdf:type owl:Class ;
+                 rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DocumentDBMS
+:DocumentDBMS rdf:type owl:Class ;
+              rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Durability
+:Durability rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
+:GraphDBMS rdf:type owl:Class ;
+           rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/InMemoryDBMS
+:InMemoryDBMS rdf:type owl:Class ;
+              rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/KeyValueDBMS
+:KeyValueDBMS rdf:type owl:Class ;
+              rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Lincese
+:Lincese rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MapReduce
+:MapReduce rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
+:MasterSlaveReplicationProtocol rdf:type owl:Class ;
+                                rdfs:subClassOf :ReplicationProtocol .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MultiModelDBMS
+:MultiModelDBMS rdf:type owl:Class ;
+                rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/OnDiskDBMS
+:OnDiskDBMS rdf:type owl:Class ;
+            rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplicationProtocol
+:PeerToPeerReplicationProtocol rdf:type owl:Class ;
+                               rdfs:subClassOf :ReplicationProtocol .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RelationalDBMS
+:RelationalDBMS rdf:type owl:Class ;
+                rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Replication
+:Replication rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ReplicationConfigurationStrategy
+:ReplicationConfigurationStrategy rdf:type owl:Class ;
+                                  rdfs:label "Replication Configuration Strategy"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ReplicationFactor
+:ReplicationFactor rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ReplicationProtocol
+:ReplicationProtocol rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ReplicationSynchronizationStrategy
+:ReplicationSynchronizationStrategy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Schema
+:Schema rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SemistructuredDBMS
+:SemistructuredDBMS rdf:type owl:Class ;
+                    rdfs:subClassOf :DatabaseManagementSystem .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SoftwareLicense
+:SoftwareLicense rdf:type owl:Class ;
+                 rdfs:subClassOf :Lincese .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SoftwareProduct
+:SoftwareProduct rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/StorageModel
+:StorageModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/StorageTechnology
+:StorageTechnology rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SynchronousReplicationProtocol
+:SynchronousReplicationProtocol rdf:type owl:Class ;
+                                rdfs:subClassOf :ReplicationProtocol .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Trigger
+:Trigger rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/TripleDBMS
+:TripleDBMS rdf:type owl:Class ;
+            rdfs:subClassOf :GraphDBMS .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
