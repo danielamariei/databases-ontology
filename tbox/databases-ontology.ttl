@@ -15,8 +15,7 @@
 @base <http://www.semanticweb.org/ontologies/databases/> .
 
 <http://www.semanticweb.org/ontologies/databases/> rdf:type owl:Ontology ;
-		owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl> ;
-                                                        owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl>
+													owl:imports <https://raw.githubusercontent.com/danielamariei/databases-ontology/master/abox/databases-ontology.ttl> ;
                                                     dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
                                                     rdfs:label "Databases Ontology"@en ;
                                                     rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
