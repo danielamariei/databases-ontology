@@ -26,3 +26,7 @@
 
 dbr:Oracle_Database rdf:type :RelationalDBMS ;
 				rdfs:label "Oracle" .
+				
+:Stardog rdf:type owl:NamedIndividual ;
+         :hasDataModel :TripleDataModel .
+				

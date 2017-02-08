@@ -1,0 +1,173 @@
+Taxonomy	
+	Database
+	DatabaseManagementSystem
+			ObjectProperties
+				hasLicense
+					hasSoftwareLicense
+				hasDataModel
+				hasStorageModel
+				hadStorageTechnology
+				hasConsistencyModel
+				hasConcurrencyControlMechanism
+				hasDataProcessingModel
+				hasDeveloper
+				hasReplicationProtocol
+				hasDataPartitioningStrategy
+				hasImplementationProgrammingLanguage
+				hasDataSchema
+				hasTransactionGranularity
+				supportsOperatingSystem
+				supportsPlatform
+				supportsProgrammingLanguage
+				supportsQueryLanguage
+			DataProperties
+				hasWebsite
+				hasInitialRelease
+				hasCurrentRelease
+				supportsMapReduce
+				supportsIndexing
+				supportsTyping
+				supportsTransactions
+				isPlatformIndependent
+				isOperatingSystemIndependent
+		DistributedDBMS
+		RelationalDBMS
+		KeyValueDBMS
+		ColumnFamilyDBMS
+		DocumentDBMS
+		SemistructuredDBMS
+		GraphDBMS
+			TripleDBMS
+		MultiModelDBMS
+		InMemoryDBMS
+		OnDiskDBMS
+	DataModel
+	StorageTechnology
+	MapReduce
+	Trigger
+	ServerSideScript
+	Consistency
+	ConsistencyModel
+	Concurrency
+	ConcurrencyControlMechanism
+	StorageModel
+	SoftwareProduct
+	DataProcessingModel
+	Durability
+	License
+		SoftwareLicense
+	Replication
+	ReplicationFactor
+	ReplicationProtocol
+		SynchronousReplicationProtocol
+		AsynchronousReplicationProtocol
+		MasterSlaveReplicationProtocol
+		PeerToPeerReplicationProtocol
+	ReplicationConfigurationStrategy
+		hasReplicationConfigurationStrategy
+	ReplicationSynchronizationStrategy
+		hasReplicationSynchronizationStrategy
+	DataPartitioning
+	DataSchema
+	Caching
+	
+Properties
+	
+NamedIndividuals	
+	DataModel
+		RelationalDataModel
+		KeyValueDataModel
+		ColumnFamilyDataModel
+		DocumentDataModel
+		SemistructuredDataModel
+		GraphDataModel
+		TripleDataModel
+		QuadDataModel
+		ObjectOrientedDataModel
+	StorageTechnology
+		InMemoryStorage
+		OnDiskStorage
+	ConsistencyModel
+		EventualConsistency
+		StrongConsistency
+		ConfigurableConsistency
+	StorageModel
+		RowOriented
+		ColumnOriented
+	DataProcessingModel
+		BatchProcessing
+		StreamProcessing
+	ReplicationProtocol
+		MasterSlaveEagerReplication
+		MasterSlaveLazyReplication
+		PeerToPeerEagerReplication
+		PeerToPeerLazyReplication
+	ReplicationConfigurationStrategy
+		MasterSlaveReplication
+		PeerToPeerReplication
+	ReplicationSynchronizationStrategy		
+		SynchronousReplication
+		AsynchronousReplication
+	DataPartitioningStrategy
+		ListPartitioning
+		RangePartitioning
+		HashPartitioning
+	DataSchema
+		FlexibleSchema
+		RigidSchema
+	
+Concepts
+	ACID
+	BASE
+	
+Axioms	
+	:MasterSlaveAsynchronousReplication rdf:type owl:Class ;
+										owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+																					 owl:onProperty :hasReplicationConfigurationStrategy ;
+																					 owl:hasValue :MasterSlaveReplication
+																				   ]
+																				   [ rdf:type owl:Restriction ;
+																					 owl:onProperty :hasReplicationSynchronizationStrategy ;
+																					 owl:hasValue :AsynchronousReplication
+																				   ]
+																				 ) ;
+															  rdf:type owl:Class
+															] .
+	
+	:MasterSlaveSynchronousReplication rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasReplicationConfigurationStrategy ;
+                                                                                owl:hasValue :MasterSlaveReplication
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasReplicationSynchronizationStrategy ;
+                                                                                owl:hasValue :SynchronousReplication
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] .
+	:PeerToPeerAsynchronousReplication rdf:type owl:Class ;
+									   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+																					owl:onProperty :hasReplicationConfigurationStrategy ;
+																					owl:hasValue :PeerToPeerReplication
+																				  ]
+																				  [ rdf:type owl:Restriction ;
+																					owl:onProperty :hasReplicationSynchronizationStrategy ;
+																					owl:hasValue :AsynchronousReplication
+																				  ]
+																				) ;
+															 rdf:type owl:Class
+														   ] .
+														   
+	:PeerToPeerSynchronousReplication rdf:type owl:Class ;
+									   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+																					owl:onProperty :hasReplicationConfigurationStrategy ;
+																					owl:hasValue :PeerToPeerReplication
+																				  ]
+																				  [ rdf:type owl:Restriction ;
+																					owl:onProperty :hasReplicationSynchronizationStrategy ;
+																					owl:hasValue :SynchronousReplication
+																				  ]
+																				) ;
+															 rdf:type owl:Class
+														   ] .

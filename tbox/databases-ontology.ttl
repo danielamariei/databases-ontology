@@ -36,6 +36,10 @@ rdf:comment rdf:type owl:AnnotationProperty .
 rdf:concept rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
+rdf:label rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -85,13 +89,14 @@ rdf:concept rdf:type owl:AnnotationProperty .
                         rdfs:label "Has Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
-:hasDataSchema rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:domain :DatabaseManagementSystem ;
-               rdfs:range :DataSchema ;
-               rdfs:comment "This property specifies the data schema constraints for a particular DBMS."@en ;
-               rdfs:label "Has Data Schema"@en .
+###  http://www.semanticweb.org/ontologies/databases/hasDataSchemaModel
+:hasDataSchemaModel rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :DatabaseManagementSystem ;
+                    rdfs:range :DataSchema ;
+                    rdfs:comment "This property specifies the data schema constraints for a particular DBMS."@en ;
+                    rdfs:label "Has Data Schema"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDeveloper
@@ -118,12 +123,28 @@ rdf:concept rdf:type owl:AnnotationProperty .
             rdfs:label "Has License"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/hasReplicationConfigurationStrategy
+:hasReplicationConfigurationStrategy rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:range :ReplicationConfigurationStrategy ;
+                                     rdfs:comment "This property specifies the replication configuration strategy supported by a particular DBMS."@en ;
+                                     rdfs:label "Has Replication Configuration Strategy"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/hasReplicationProtocol
 :hasReplicationProtocol rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :DatabaseManagementSystem ;
                         rdfs:comment "This property specifies the replication protocol supported by a particular DBMS."@en ;
                         rdfs:label "Has Replication Protocol"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/hasReplicationSynchronizationStrategy
+:hasReplicationSynchronizationStrategy rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                       rdfs:domain :ReplicationSynchronizationStrategy ;
+                                       rdfs:comment "This property specifies the replication synchronization strategy supported by a particular DBMS."@en ;
+                                       rdfs:label "Has Replication Synchronization Strategy"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasSoftwareLicense
@@ -294,9 +315,20 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasReplicationSynchronizationStrategy ;
+                                                       owl:hasValue :AsynchronousReplication
+                                                     ] ;
                                  rdfs:subClassOf :ReplicationProtocol ;
                                  rdfs:comment "The class of asynchronous replication protocols."@en ;
                                  rdfs:label "Asynchronous Replication Protocol"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/BatchProcessingModel
+:BatchProcessingModel rdf:type owl:Class ;
+                      rdfs:subClassOf :DataProcessingModel ;
+                      rdfs:comment "The class of batch processing models."@en ;
+                      rdfs:label "Batch Processing Model"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Caching
@@ -366,6 +398,10 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
             rdfs:label "Data Schema"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/DataSchemaModel
+:DataSchemaModel rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/Database
 :Database rdf:type owl:Class ;
           rdfs:comment "The concept of databse."@en ;
@@ -423,13 +459,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :License rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MapReduce
-:MapReduce rdf:type owl:Class ;
-           rdf:comment "The concept of MapReduce, a distributed, batch, data processing model."@en .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
 :MasterSlaveReplicationProtocol rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasReplicationConfigurationStrategy ;
+                                                      owl:hasValue :MasterSlaveReplication
+                                                    ] ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of master-slave replication protocols."@en ;
                                 rdfs:label "Master-Slave Replication Protocol"@en .
@@ -451,6 +486,10 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplicationProtocol
 :PeerToPeerReplicationProtocol rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasReplicationConfigurationStrategy ;
+                                                     owl:hasValue :PeerToPeerReplication
+                                                   ] ;
                                rdfs:subClassOf :ReplicationProtocol ;
                                rdfs:comment "The class of peer-to-peer replication protocols."@en ;
                                rdfs:label "Peer-to-Peer Replication Protocol"@en .
@@ -525,8 +564,19 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                    rdfs:label "Storage Technology" .
 
 
+###  http://www.semanticweb.org/ontologies/databases/StreamProcessingModel
+:StreamProcessingModel rdf:type owl:Class ;
+                       rdfs:subClassOf :DataProcessingModel ;
+                       rdfs:comment "The class of stream processing models."@en ;
+                       rdfs:label "Stream Processing Model"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/SynchronousReplicationProtocol
 :SynchronousReplicationProtocol rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasReplicationSynchronizationStrategy ;
+                                                      owl:hasValue :SynchronousReplication
+                                                    ] ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of synchronous replication protocols."@en ;
                                 rdfs:label "Synchronous Replication Protocol"@en .
@@ -552,14 +602,198 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/Stardog
-:Stardog rdf:type owl:NamedIndividual ;
-         :hasDataModel :TripleDataModel .
+###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
+:AsynchronousReplication rdf:type owl:NamedIndividual ,
+                                  :ReplicationSynchronizationStrategy ;
+                         rdfs:label "Asynchronous Replication"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDataModel
+:ColumnFamilyDataModel rdf:type owl:NamedIndividual ,
+                                :DataModel ;
+                       rdfs:label "Column-Family Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ColumnOriented
+:ColumnOriented rdf:type owl:NamedIndividual ,
+                         :StorageModel ;
+                rdfs:label "Column-Oriented"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ConfigurableConsistency
+:ConfigurableConsistency rdf:type owl:NamedIndividual ,
+                                  :ConsistencyModel ;
+                         rdfs:label "Configurable Consistency"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DocumentDataModel
+:DocumentDataModel rdf:type owl:NamedIndividual ,
+                            :DataModel ;
+                   rdfs:label "Document Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/EventualConsistency
+:EventualConsistency rdf:type owl:NamedIndividual ,
+                              :ConsistencyModel ;
+                     rdfs:label "Eventual Consistency"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/FlexibleSchema
+:FlexibleSchema rdf:type owl:NamedIndividual ,
+                         :DataSchemaModel ;
+                rdfs:label "Flexible Schema"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/GraphDataModel
+:GraphDataModel rdf:type owl:NamedIndividual ,
+                         :DataModel ;
+                rdfs:label "Graph Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/HashPartitioning
+:HashPartitioning rdf:type owl:NamedIndividual ,
+                           :DataPartitioningStrategy ;
+                  rdfs:label "Hash Partitioning"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/InMemoryStorage
+:InMemoryStorage rdf:type owl:NamedIndividual ,
+                          :StorageTechnology ;
+                 rdf:label "In-Memory Storage"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/KeyValueDataModel
+:KeyValueDataModel rdf:type owl:NamedIndividual ,
+                            :DataModel ;
+                   rdfs:label "Key-Value Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ListPartitioning
+:ListPartitioning rdf:type owl:NamedIndividual ,
+                           :DataPartitioningStrategy ;
+                  rdfs:label "List Partitioning"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MapReduce
+:MapReduce rdf:type owl:NamedIndividual ,
+                    :BatchProcessingModel ;
+           rdf:comment "The concept of MapReduce, a distributed, batch, data processing model."@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MasterSlaveAsynchronousReplication
+:MasterSlaveAsynchronousReplication rdf:type owl:NamedIndividual ,
+                                             :AsynchronousReplicationProtocol ,
+                                             :MasterSlaveReplicationProtocol ;
+                                    rdfs:comment "The master-slave asynchronous replication protocol." ;
+                                    rdfs:label "Master-Slave Asynchronous Replication" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplication
+:MasterSlaveReplication rdf:type owl:NamedIndividual ,
+                                 :ReplicationConfigurationStrategy ;
+                        rdfs:label "Master-Slave Replication"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MasterSlaveSynchronousReplication
+:MasterSlaveSynchronousReplication rdf:type owl:NamedIndividual ,
+                                            :MasterSlaveReplicationProtocol ,
+                                            :SynchronousReplicationProtocol ;
+                                   rdfs:comment "The master-slave synchronous replication protocol." ;
+                                   rdfs:label "Master-Slave Synchronous Replication" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ObjectOrientedDataModel
+:ObjectOrientedDataModel rdf:type owl:NamedIndividual ,
+                                  :DataModel ;
+                         rdfs:label "Object-Oriented Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/OnDiskStorage
+:OnDiskStorage rdf:type owl:NamedIndividual ,
+                        :StorageTechnology ;
+               rdfs:label "On-Disk Storage"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/PeerToPeerAsynchronousReplication
+:PeerToPeerAsynchronousReplication rdf:type owl:NamedIndividual ,
+                                            :AsynchronousReplicationProtocol ,
+                                            :PeerToPeerReplicationProtocol ;
+                                   rdfs:comment "The peer-to-peer asynchronous replication protocol." ;
+                                   rdfs:label "Peer-to-Peer Asynchronous Replication" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplication
+:PeerToPeerReplication rdf:type owl:NamedIndividual ,
+                                :ReplicationConfigurationStrategy ;
+                       rdfs:label "Peer-to-Peer Replication"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/PeerToPeerSynchronousReplication
+:PeerToPeerSynchronousReplication rdf:type owl:NamedIndividual ,
+                                           :PeerToPeerReplicationProtocol ,
+                                           :SynchronousReplicationProtocol ;
+                                  rdfs:comment "The peer-to-peer synchronous replication protocol." ;
+                                  rdfs:label "Peer-to-Peer Synchronous Replication" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/QuadDataModel
+:QuadDataModel rdf:type owl:NamedIndividual ,
+                        :DataModel ;
+               rdfs:label "Quad Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RangePartitioning
+:RangePartitioning rdf:type owl:NamedIndividual ,
+                            :DataPartitioningStrategy ;
+                   rdfs:label "Range Partitioning"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RelationalDataModel
+:RelationalDataModel rdf:type owl:NamedIndividual ,
+                              :DataModel ;
+                     rdfs:label "Relational Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RigidSchema
+:RigidSchema rdf:type owl:NamedIndividual ,
+                      :DataSchemaModel ;
+             rdfs:label "Rigid Schema"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RowOriented
+:RowOriented rdf:type owl:NamedIndividual ,
+                      :StorageModel ;
+             rdfs:label "Row-Oriented"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SemistructuredDataModel
+:SemistructuredDataModel rdf:type owl:NamedIndividual ,
+                                  :DataModel ;
+                         rdfs:label "Semistructured Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SlidingWindow
+:SlidingWindow rdf:type owl:NamedIndividual ,
+                        :StreamProcessingModel ;
+               rdf:comment "The concept of sliding-window processing model data processing model."@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/StrongConsistency
+:StrongConsistency rdf:type owl:NamedIndividual ,
+                            :ConsistencyModel ;
+                   rdfs:label "Strong Consistency"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SynchronousReplication
+:SynchronousReplication rdf:type owl:NamedIndividual ,
+                                 :ReplicationSynchronizationStrategy ;
+                        rdfs:label "Synchronous Replication"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/TripleDataModel
 :TripleDataModel rdf:type owl:NamedIndividual ,
-                          :DataModel .
+                          :DataModel ;
+                 rdfs:label "Triple Data Model"@en .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi

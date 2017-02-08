@@ -1,0 +1,126 @@
+Resources: 
+	* A Semantic Web Primer
+	* Ontology Development 101: A Guide to Creating Your First Ontology: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+	* Web Application Development: http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html
+
+Taxonomy	
+	Database
+	DatabaseManagementSystem
+			ObjectProperties
+				hasLicense
+					hasSoftwareLicense
+				hasDataModel
+				hasStorageModel
+				hadStorageTechnology
+				hasConsistencyModel
+				hasConcurrencyControlMechanism
+				hasDataProcessingModel
+				hasDeveloper
+				hasReplicationProtocol
+				hasDataPartitioningStrategy
+				hasImplementationProgrammingLanguage
+				hasDataSchema
+				hasTransactionGranularity
+				supportsOperatingSystem
+				supportsPlatform
+				supportsProgrammingLanguage
+				supportsQueryLanguage
+			DataProperties
+				hasWebsite
+				hasInitialRelease
+				hasCurrentRelease
+				supportsMapReduce
+				supportsIndexing
+				supportsTyping
+				supportsTransactions
+				isPlatformIndependent
+				isOperatingSystemIndependent
+		DistributedDBMS
+		RelationalDBMS
+		KeyValueDBMS
+		ColumnFamilyDBMS
+		DocumentDBMS
+		SemistructuredDBMS
+		GraphDBMS
+			TripleDBMS
+		MultiModelDBMS
+		InMemoryDBMS
+		OnDiskDBMS
+	DataModel
+	StorageTechnology
+	MapReduce
+	Trigger
+	ServerSideScript
+	Consistency
+	ConsistencyModel
+	Concurrency
+	ConcurrencyControlMechanism
+	StorageModel
+	SoftwareProduct
+	DataProcessingModel
+	Durability
+	License
+		SoftwareLicense
+	Replication
+	ReplicationFactor
+	ReplicationProtocol
+		SynchronousReplicationProtocol
+		AsynchronousReplicationProtocol
+		MasterSlaveReplicationProtocol
+		PeerToPeerReplicationProtocol
+	ReplicationConfigurationStrategy
+	ReplicationSynchronizationStrategy
+	DataPartitioning
+	DataSchema
+	Caching
+	
+Properties
+	
+NamedIndividuals	
+	DataModel
+		RelationalDataModel
+		KeyValueDataModel
+		ColumnFamilyDataModel
+		DocumentDataModel
+		SemistructuredDataModel
+		GraphDataModel
+		TripleDataModel
+		QuadDataModel
+		ObjectOrientedDataModel
+	StorageTechnology
+		InMemoryStorage
+		OnDiskStorage
+	ConsistencyModel
+		EventualConsistency
+		StrongConsistency
+		ConfigurableConsistency
+	StorageModel
+		RowOriented
+		ColumnOriented
+	DataProcessingModel
+		BatchProcessing
+		StreamProcessing
+	ReplicationProtocol
+		MasterSlaveEagerReplication
+		MasterSlaveLazyReplication
+		PeerToPeerEagerReplication
+		PeerToPeerLazyReplication
+	ReplicationConfigurationStrategy
+		MasterSlaveReplication
+		PeerToPeerReplication
+	ReplicationSynchronizationStrategy		
+		SynchronousReplication
+		AsynchronousReplication
+	DataPartitioningStrategy
+		ListPartitioning
+		RangePartitioning
+		HashPartitioning
+	DataSchema
+		FlexibleSchema
+		RigidSchema
+	
+Concepts
+	ACID
+	BASE
+	
+	
