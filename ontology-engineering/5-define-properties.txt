@@ -84,6 +84,8 @@ NamedIndividuals
 		DocumentDataModel
 		SemistructuredDataModel
 		GraphDataModel
+		TripleDataModel
+		QuadDataModel
 		ObjectOrientedDataModel
 	StorageTechnology
 		InMemoryStorage
@@ -113,7 +115,7 @@ NamedIndividuals
 		ListPartitioning
 		RangePartitioning
 		HashPartitioning
-	Schema
+	DataSchema
 		FlexibleSchema
 		RigidSchema
 	
