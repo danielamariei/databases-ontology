@@ -6,32 +6,35 @@ Resources:
 Taxonomy	
 	Database
 	DatabaseManagementSystem
-			hasLicense
-			hasDataModel
-			hasStorageModel
-			hadStorageTechnology
-			hasConsistencyModel
-			hasConcurrencyControlMechanism
-			hasDataProcessingModel
-			hasDeveloper
-			hasReplicationProtocol
-			hasDataPartitioningStrategy
-			hasWebsite
-			hasInitialRelease
-			hasCurrentRelease
-			hasImplementationProgrammingLanguage
-			hasDataSchema
-			hasTransactionGranularity
-			supportsMapReduce
-			supportsIndexing
-			supportsTyping
-			supportsOperatingSystem
-			supportsPlatform
-			supportsTransactions
-			supportsProgrammingLanguage
-			supportsQueryLanguage
-			isPlatformIndependent
-			isOperatingSystemIndependent
+			ObjectProperties
+				hasLicense
+					hasSoftwareLicense
+				hasDataModel
+				hasStorageModel
+				hadStorageTechnology
+				hasConsistencyModel
+				hasConcurrencyControlMechanism
+				hasDataProcessingModel
+				hasDeveloper
+				hasReplicationProtocol
+				hasDataPartitioningStrategy
+				hasImplementationProgrammingLanguage
+				hasDataSchema
+				hasTransactionGranularity
+				supportsOperatingSystem
+				supportsPlatform
+				supportsProgrammingLanguage
+				supportsQueryLanguage
+			DataProperties
+				hasWebsite
+				hasInitialRelease
+				hasCurrentRelease
+				supportsMapReduce
+				supportsIndexing
+				supportsTyping
+				supportsTransactions
+				isPlatformIndependent
+				isOperatingSystemIndependent
 		DistributedDBMS
 		RelationalDBMS
 		KeyValueDBMS
