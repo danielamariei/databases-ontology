@@ -59,7 +59,7 @@ Taxonomy
 	SoftwareProduct
 	DataProcessingModel
 	Durability
-	Lincese
+	License
 		SoftwareLicense
 	Replication
 	ReplicationFactor
