@@ -24,8 +24,9 @@
                                                     dc:creator "Daniel Amariei"@en ;
                                                     dc:contributor "Ioana Bîrsan"@en .
 
-dbr:Oracle_Database rdf:type :RelationalDBMS ;
-				rdfs:label "Oracle" .
+dbr:Oracle_Database 
+				rdfs:label "Oracle" ;
+				:hasDataModel :RelationalDataModel.
 				
 :Stardog rdf:type owl:NamedIndividual ;
          :hasDataModel :TripleDataModel .
