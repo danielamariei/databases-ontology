@@ -6,6 +6,32 @@ Resources:
 Taxonomy	
 	Database
 	DatabaseManagementSystem
+			hasLicense
+			hasDataModel
+			hasStorageModel
+			hadStorageTechnology
+			hasConsistencyModel
+			hasConcurrencyControlMechanism
+			hasDataProcessingModel
+			hasDeveloper
+			hasReplicationProtocol
+			hasDataPartitioningStrategy
+			hasWebsite
+			hasInitialRelease
+			hasCurrentRelease
+			hasImplementationProgrammingLanguage
+			hasDataSchema
+			hasTransactionGranularity
+			supportsMapReduce
+			supportsIndexing
+			supportsTyping
+			supportsOperatingSystem
+			supportsPlatform
+			supportsTransactions
+			supportsProgrammingLanguage
+			supportsQueryLanguage
+			isPlatformIndependent
+			isOperatingSystemIndependent
 		DistributedDBMS
 		RelationalDBMS
 		KeyValueDBMS
@@ -21,6 +47,7 @@ Taxonomy
 	StorageTechnology
 	MapReduce
 	Trigger
+	ServerSideScript
 	Consistency
 	ConsistencyModel
 	Concurrency
@@ -29,7 +56,7 @@ Taxonomy
 	SoftwareProduct
 	DataProcessingModel
 	Durability
-	License
+	Lincese
 		SoftwareLicense
 	Replication
 	ReplicationFactor
@@ -41,8 +68,10 @@ Taxonomy
 	ReplicationConfigurationStrategy
 	ReplicationSynchronizationStrategy
 	DataPartitioning
-	Schema
+	DataSchema
 	Caching
+	
+Properties
 	
 NamedIndividuals	
 	DataModel
@@ -89,16 +118,4 @@ Concepts
 	ACID
 	BASE
 	
-Properties
-	hasLicense
-	hasDeveloper
-	hasWebsite
-	hasInitialRelease
-	hasCurrentRelease
-	supportsOperatingSystem
-	supportsPlatform
-	isPlatformIndependent
-	isOperatingSystemIndependent
-	supportsProgrammingLanguage
-	supportsQueryLanguage
 	

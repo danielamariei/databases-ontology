@@ -21,7 +21,6 @@ Taxonomy
 	StorageTechnology
 	MapReduce
 	Trigger
-	ServerSideScript
 	Consistency
 	ConsistencyModel
 	Concurrency
@@ -30,7 +29,7 @@ Taxonomy
 	SoftwareProduct
 	DataProcessingModel
 	Durability
-	Lincese
+	License
 		SoftwareLicense
 	Replication
 	ReplicationFactor
@@ -41,8 +40,9 @@ Taxonomy
 		PeerToPeerReplicationProtocol
 	ReplicationConfigurationStrategy
 	ReplicationSynchronizationStrategy
+	DataPartitioningStrategy
 	DataPartitioning
-	Schema
+	DataSchema
 	Caching
 	
 NamedIndividuals	
@@ -82,7 +82,7 @@ NamedIndividuals
 		ListPartitioning
 		RangePartitioning
 		HashPartitioning
-	Schema
+	DataSchema
 		FlexibleSchema
 		RigidSchema
 	
