@@ -23,7 +23,7 @@ The ontology can be validated using the following tools/services:
 ### Bibliography
 * Web Applications Development (RO), Dr. Sabin-Corneliu Buraga, http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII;
 * A Semantic Web Primer, second edition, Grigoris Antoniou and Frank van Harmelen, 2008;
-* Ontology Development 101: A Guide to Creating Your First Ontology, Natalya F. Noy  and Deborah L. McGuinness, http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html#Section4.
+* Ontology Development 101: A Guide to Creating Your First Ontology, Natalya F. Noy  and Deborah L. McGuinness, http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html.
 
 ### Resources
 * [WebVOWL](http://vowl.visualdataweb.org/webvowl.html);
