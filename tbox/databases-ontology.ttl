@@ -22,8 +22,7 @@
                                                     dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
                                                     dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
                                                     dc:title "Databases Ontology"@en ;
-                                                    dc:creator "Daniel Amariei"@en ;
-                                                    dc:contributor "Ioana Bîrsan"@en .
+                                                    dc:creator "Daniel Amariei"@en .
 
 #################################################################
 #    Object Properties
@@ -31,57 +30,69 @@
 
 ###  http://www.semanticweb.org/ontologies/databases/hadStorageTechnology
 :hadStorageTechnology rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty .
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :DatabaseManagementSystem ;
+                      rdfs:range :StorageTechnology .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasConcurrencyControlMechanism
 :hasConcurrencyControlMechanism rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf owl:topObjectProperty .
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasConsistencyModel
 :hasConsistencyModel rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf owl:topObjectProperty .
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDataModel
 :hasDataModel rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty .
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDataPartitioningStrategy
 :hasDataPartitioningStrategy rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty .
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDataProcessingModel
 :hasDataProcessingModel rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf owl:topObjectProperty .
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
 :hasDataSchema rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty .
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDeveloper
 :hasDeveloper rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty .
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasImplementationProgrammingLanguage
 :hasImplementationProgrammingLanguage rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf owl:topObjectProperty .
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasLicense
 :hasLicense rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty .
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasReplicationProtocol
 :hasReplicationProtocol rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf owl:topObjectProperty .
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasSoftwareLicense
@@ -91,32 +102,42 @@
 
 ###  http://www.semanticweb.org/ontologies/databases/hasStorageModel
 :hasStorageModel rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty .
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasTransactionGranularity
 :hasTransactionGranularity rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty .
+                           rdfs:subPropertyOf owl:topObjectProperty ;
+                           rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/supportsOperatingSystem
 :supportsOperatingSystem rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty .
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/supportsPlatform
 :supportsPlatform rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty .
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/supportsProgrammingLanguage
 :supportsProgrammingLanguage rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty .
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/supportsQueryLanguage
 :supportsQueryLanguage rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty .
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain :DatabaseManagementSystem .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 
 #################################################################
