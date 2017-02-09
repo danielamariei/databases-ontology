@@ -12,7 +12,7 @@ The repository is structured as follows:
 
 ### Visualizing the Ontology
 The ontology can be visualized using the following tools/approaches:
-* [render an interactive visualization of the Databases Ontology using WebVOWL](http://visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/danielamariei/databases-ontology/master/tbox/databases-ontology.ttl)  (select the *Reset* option -- bottom-right -- after loading the ontology);
+* [render an interactive visualization of the Databases Ontology using WebVOWL](http://visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/danielamariei/databases-ontology/master/tbox/databases-ontology.ttl)  (select the **Reset** option after loading the ontology; it is located on the bottom-right side of the screen);
 * [render a human-readable HTML page of the Databases Ontology](http://www.essepuntato.it/lode/closure/reasoner/https://raw.githubusercontent.com/danielamariei/databases-ontology/master/tbox/databases-ontology.ttl);
 * [view the Databases Ontology in one of the various serialization formats available](https://github.com/danielamariei/databases-ontology/blob/master/tbox/).
 
