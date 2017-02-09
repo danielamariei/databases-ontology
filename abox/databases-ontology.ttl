@@ -32,7 +32,7 @@ dbr:Oracle_Database2 rdf:type owl:NamedIndividual;
 				rdfs:label "Oracle2" ;
 				db:hasDataModel db:RelationalDataModel.
 				
-:Stardog rdf:type owl:NamedIndividual ;
+db:Stardog rdf:type owl:NamedIndividual ;
          db:hasDataModel db:TripleDataModel ;
 		 db:hasReplicationProtocol db:MasterSlaveSynchronousReplication.
 				
