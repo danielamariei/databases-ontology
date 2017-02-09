@@ -24,7 +24,7 @@
                                                     dc:creator "Daniel Amariei"@en ;
                                                     dc:contributor "Ioana Bîrsan"@en .
 
-dbr:Oracle_Database 
+dbr:Oracle_Database rdf:type owl:NamedIndividual;
 				rdfs:label "Oracle" ;
 				:hasDataModel :RelationalDataModel.
 				

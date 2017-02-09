@@ -19,7 +19,8 @@
                                                     dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
                                                     rdfs:label "Databases Ontology"@en ;
                                                     rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
+                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ,
+                                                                             "***, Pramod J. Sadalage and Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. Addison-Wesley Professional, 1st edition, 2012."@en ;
                                                     dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
                                                     dc:title "Databases Ontology"@en ;
                                                     dc:creator "Daniel Amariei"@en .
@@ -289,6 +290,16 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                    rdfs:label "Supports MapReduce"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/supportsReplication
+:supportsReplication rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :DatabaseManagementSystem ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "This property specifies if a particular DBMS suports replication."@en ;
+                     rdfs:label "Supports Replication"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/supportsTransactions
 :supportsTransactions rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
@@ -313,6 +324,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/ontologies/databases/AnalyticsData
+:AnalyticsData rdf:type owl:Class ;
+               rdfs:subClassOf :Data ;
+               rdfs:label "Analytics Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
                                  owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -329,6 +346,13 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                       rdfs:subClassOf :DataProcessingModel ;
                       rdfs:comment "The class of batch processing models."@en ;
                       rdfs:label "Batch Processing Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/CMSSoftwareApplication
+:CMSSoftwareApplication rdf:type owl:Class ;
+                        rdfs:subClassOf :SoftwareApplication ;
+                        rdfs:comment "The class of CMS software applications."@en ;
+                        rdfs:label "CMS Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Caching
@@ -366,6 +390,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :ConsistencyModel rdf:type owl:Class ;
                   rdfs:comment "The class of conistency models."@en ;
                   rdfs:label "Consistency Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Data
+:Data rdf:type owl:Class ;
+      rdfs:comment "The class of data entities."@en ;
+      rdfs:label "Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/DataModel
@@ -434,6 +464,20 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
             rdfs:label "Durability"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/E-CommerceSoftwareApplication
+:E-CommerceSoftwareApplication rdf:type owl:Class ;
+                               rdfs:subClassOf :SoftwareApplication ;
+                               rdfs:comment "The class of E-Commerce software applications."@en ;
+                               rdfs:label "E-Commerce Software Application"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageData
+:ExpiringUsageData rdf:type owl:Class ;
+                   rdfs:subClassOf :Data ;
+                   rdfs:comment "Data that expires after a certain ammount of time and needs to be deleted."@en ;
+                   rdfs:label "Expiring-Usage Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
 :GraphDBMS rdf:type owl:Class ;
            rdfs:subClassOf :DatabaseManagementSystem ;
@@ -457,6 +501,31 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/License
 :License rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LinkedData
+:LinkedData rdf:type owl:Class ;
+            rdfs:subClassOf :Data ;
+            rdfs:label "Linked Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LocationData
+:LocationData rdf:type owl:Class ;
+              rdfs:subClassOf :Data ;
+              rdfs:label "Location Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LogData
+:LogData rdf:type owl:Class ;
+         rdfs:subClassOf :Data ;
+         rdfs:label "Log Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
+:LowLatencySoftwareApplication rdf:type owl:Class ;
+                               rdfs:subClassOf :SoftwareApplication ;
+                               rdfs:comment "The class of low-latency software applications."@en ;
+                               rdfs:label "Low-Latency Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
@@ -495,11 +564,24 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                rdfs:label "Peer-to-Peer Replication Protocol"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/PreferencesData
+:PreferencesData rdf:type owl:Class ;
+                 rdfs:subClassOf :Data ;
+                 rdfs:label "Preferences Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/QuadStoreDBMS
 :QuadStoreDBMS rdf:type owl:Class ;
                rdfs:subClassOf :GraphDBMS ;
                rdfs:comment "The class of Quad store DBMSs."@en ;
                rdfs:label "Quad Store DBMS"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RecommendationSoftwareApplication
+:RecommendationSoftwareApplication rdf:type owl:Class ;
+                                   rdfs:subClassOf :SoftwareApplication ;
+                                   rdfs:comment "The class of recommendation software applications."@en ;
+                                   rdfs:label "Recommendation Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/RelationalDBMS
@@ -536,11 +618,35 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                     rdfs:label "Replication Synchronization Strategy"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/RoutingData
+:RoutingData rdf:type owl:Class ;
+             rdfs:subClassOf :Data ;
+             rdfs:label "Routing Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/SemistructuredDBMS
 :SemistructuredDBMS rdf:type owl:Class ;
                     rdfs:subClassOf :DatabaseManagementSystem ;
                     rdfs:comment "The class of semistructured DBMSs."@en ;
                     rdfs:label "Semistructured DBMS"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SessionData
+:SessionData rdf:type owl:Class ;
+             rdfs:subClassOf :Data ;
+             rdfs:label "Session Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ShopingCartData
+:ShopingCartData rdf:type owl:Class ;
+                 rdfs:subClassOf :Data ;
+                 rdfs:label "Shoping-Cart Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SoftwareApplication
+:SoftwareApplication rdf:type owl:Class ;
+                     rdfs:comment "The classl of software applications."@en ;
+                     rdfs:label "Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/SoftwareLicense
@@ -596,6 +702,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                  rdfs:subClassOf :GraphDBMS ;
                  rdfs:comment "The class of triple store DBMSs."@en ;
                  rdfs:label "Triple Store DBMS"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/UserProfileData
+:UserProfileData rdf:type owl:Class ;
+                 rdfs:subClassOf :Data ;
+                 rdfs:label "User-Profile Data"@en .
 
 
 #################################################################
@@ -659,7 +771,7 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 ###  http://www.semanticweb.org/ontologies/databases/InMemoryStorage
 :InMemoryStorage rdf:type owl:NamedIndividual ,
                           :StorageTechnology ;
-                 rdf:label "In-Memory Storage"@en .
+                 rdfs:label "In-Memory Storage"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/KeyValueDataModel
@@ -794,6 +906,20 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :TripleDataModel rdf:type owl:NamedIndividual ,
                           :DataModel ;
                  rdfs:label "Triple Data Model"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasReplicationProtocol ;
+  owl:someValuesFrom :ReplicationProtocol ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :supportsReplication ;
+                        owl:hasValue "true"^^xsd:boolean
+                      ]
+] .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
