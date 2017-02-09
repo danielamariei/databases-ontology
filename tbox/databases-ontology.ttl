@@ -41,6 +41,10 @@ rdf:concept rdf:type owl:AnnotationProperty .
 rdf:label rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2000/01/rdf-schema#commnet
+rdfs:commnet rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -213,6 +217,24 @@ rdf:label rdf:type owl:AnnotationProperty .
                        rdfs:label "Supports Query Language"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/usesData
+:usesData rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :SoftwareApplication ;
+          rdfs:range :Data ;
+          rdfs:comment "This property specifies the nature of the data used by a particular software application."@en ;
+          rdfs:label "Uses Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/usesOperation
+:usesOperation rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :SoftwareApplication ;
+               rdfs:range :Operation ;
+               rdfs:comment "This property specifies the operation type used by a particular software applicatoin."@en ;
+               rdfs:label "Uses Operation"@en .
+
+
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
 owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
@@ -323,12 +345,6 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 #################################################################
 #    Classes
 #################################################################
-
-###  http://www.semanticweb.org/ontologies/databases/AnalyticsData
-:AnalyticsData rdf:type owl:Class ;
-               rdfs:subClassOf :Data ;
-               rdfs:label "Analytics Data"@en .
-
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
@@ -471,13 +487,6 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                rdfs:label "E-Commerce Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageData
-:ExpiringUsageData rdf:type owl:Class ;
-                   rdfs:subClassOf :Data ;
-                   rdfs:comment "Data that expires after a certain ammount of time and needs to be deleted."@en ;
-                   rdfs:label "Expiring-Usage Data"@en .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
 :GraphDBMS rdf:type owl:Class ;
            rdfs:subClassOf :DatabaseManagementSystem ;
@@ -501,24 +510,6 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/License
 :License rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/databases/LinkedData
-:LinkedData rdf:type owl:Class ;
-            rdfs:subClassOf :Data ;
-            rdfs:label "Linked Data"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/LocationData
-:LocationData rdf:type owl:Class ;
-              rdfs:subClassOf :Data ;
-              rdfs:label "Location Data"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/LogData
-:LogData rdf:type owl:Class ;
-         rdfs:subClassOf :Data ;
-         rdfs:label "Log Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
@@ -553,6 +544,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
             rdfs:label "On-Disk DBMS"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/Operation
+:Operation rdf:type owl:Class ;
+           rdfs:comment "The class of operation types (e.g., OLTP, OLAP, query, transaction, etc.)."@en ;
+           rdfs:label "Operation"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplicationProtocol
 :PeerToPeerReplicationProtocol rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -562,12 +559,6 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                rdfs:subClassOf :ReplicationProtocol ;
                                rdfs:comment "The class of peer-to-peer replication protocols."@en ;
                                rdfs:label "Peer-to-Peer Replication Protocol"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/PreferencesData
-:PreferencesData rdf:type owl:Class ;
-                 rdfs:subClassOf :Data ;
-                 rdfs:label "Preferences Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/QuadStoreDBMS
@@ -618,29 +609,11 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                     rdfs:label "Replication Synchronization Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RoutingData
-:RoutingData rdf:type owl:Class ;
-             rdfs:subClassOf :Data ;
-             rdfs:label "Routing Data"@en .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/SemistructuredDBMS
 :SemistructuredDBMS rdf:type owl:Class ;
                     rdfs:subClassOf :DatabaseManagementSystem ;
                     rdfs:comment "The class of semistructured DBMSs."@en ;
                     rdfs:label "Semistructured DBMS"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/SessionData
-:SessionData rdf:type owl:Class ;
-             rdfs:subClassOf :Data ;
-             rdfs:label "Session Data"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/ShopingCartData
-:ShopingCartData rdf:type owl:Class ;
-                 rdfs:subClassOf :Data ;
-                 rdfs:label "Shoping-Cart Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/SoftwareApplication
@@ -704,15 +677,29 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                  rdfs:label "Triple Store DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/UserProfileData
-:UserProfileData rdf:type owl:Class ;
-                 rdfs:subClassOf :Data ;
-                 rdfs:label "User-Profile Data"@en .
-
-
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/ontologies/databases/ACID
+:ACID rdf:type owl:NamedIndividual ,
+               :Operation ;
+      rdfs:comment "Atomicity, Consistency, Isolation, Durability"@en ;
+      rdfs:label "ACID"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Aggregation
+:Aggregation rdf:type owl:NamedIndividual ,
+                      :Operation ;
+             rdfs:comment "An operations that performs aggregations (e.g., AVG, SUM, COUNT, etc.)"@en ;
+             rdfs:label "Aggregation"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/AnalyticsData
+:AnalyticsData rdf:type owl:NamedIndividual ,
+                        :Data ;
+               rdfs:label "Analytics Data"@en .
+
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
 :AsynchronousReplication rdf:type owl:NamedIndividual ,
@@ -750,6 +737,13 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                      rdfs:label "Eventual Consistency"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageData
+:ExpiringUsageData rdf:type owl:NamedIndividual ,
+                            :Data ;
+                   rdfs:comment "Data that expires after a certain ammount of time and needs to be deleted."@en ;
+                   rdfs:label "Expiring-Usage Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/FlexibleSchema
 :FlexibleSchema rdf:type owl:NamedIndividual ,
                          :DataSchemaModel ;
@@ -780,10 +774,28 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                    rdfs:label "Key-Value Data Model"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/LinkedData
+:LinkedData rdf:type owl:NamedIndividual ,
+                     :Data ;
+            rdfs:label "Linked Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/ListPartitioning
 :ListPartitioning rdf:type owl:NamedIndividual ,
                            :DataPartitioningStrategy ;
                   rdfs:label "List Partitioning"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LocationData
+:LocationData rdf:type owl:NamedIndividual ,
+                       :Data ;
+              rdfs:label "Location Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LogData
+:LogData rdf:type owl:NamedIndividual ,
+                  :Data ;
+         rdfs:label "Log Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MapReduce
@@ -812,6 +824,27 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                             :SynchronousReplicationProtocol ;
                                    rdfs:comment "The master-slave synchronous replication protocol." ;
                                    rdfs:label "Master-Slave Synchronous Replication" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MultiOperationTransaction
+:MultiOperationTransaction rdf:type owl:NamedIndividual ,
+                                    :Operation ;
+                           rdfs:comment "A transaction that spawns multiple operations."@en ;
+                           rdfs:label "Multi-Operation Transaction"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/OLAP
+:OLAP rdf:type owl:NamedIndividual ,
+               :Operation ;
+      rdfs:comment "Online Analytical Processing"@en ;
+      rdfs:label "OLAP"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/OLTP
+:OLTP rdf:type owl:NamedIndividual ,
+               :Operation ;
+      rdfs:comment "Online Transaction Processing"@en ;
+      rdfs:label "OLTP"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/ObjectOrientedDataModel
@@ -848,10 +881,30 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                                   rdfs:label "Peer-to-Peer Synchronous Replication" .
 
 
+###  http://www.semanticweb.org/ontologies/databases/PreferencesData
+:PreferencesData rdf:type owl:NamedIndividual ,
+                          :Data ;
+                 rdfs:label "Preferences Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/QuadDataModel
 :QuadDataModel rdf:type owl:NamedIndividual ,
                         :DataModel ;
                rdfs:label "Quad Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/QueryAgainstVaryingAggregateDataStructure
+:QueryAgainstVaryingAggregateDataStructure rdf:type owl:NamedIndividual ,
+                                                    :Operation ;
+                                           rdfs:commnet "Queries executed againsts data that is not stored in an uniform schema."@en ;
+                                           rdfs:label "Query Against Varying Aggregate Data Structure"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/QueryByData
+:QueryByData rdf:type owl:NamedIndividual ,
+                      :Operation ;
+             rdfs:comment "Queries executed by the data content, not the identifying key of the data."@en ;
+             rdfs:label "Query By Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/RangePartitioning
@@ -872,6 +925,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
              rdfs:label "Rigid Schema"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/RoutingData
+:RoutingData rdf:type owl:NamedIndividual ,
+                      :Data ;
+             rdfs:label "Routing Data"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/RowOriented
 :RowOriented rdf:type owl:NamedIndividual ,
                       :StorageModel ;
@@ -882,6 +941,25 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :SemistructuredDataModel rdf:type owl:NamedIndividual ,
                                   :DataModel ;
                          rdfs:label "Semistructured Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SessionData
+:SessionData rdf:type owl:NamedIndividual ,
+                      :Data ;
+             rdfs:label "Session Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SetRelated
+:SetRelated rdf:type owl:NamedIndividual ,
+                     :Operation ;
+            rdfs:comment "Set-Related Operations (e.g., Union, Intersection, etc.)"@en ;
+            rdfs:label "Set-Related"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ShoppingCartData
+:ShoppingCartData rdf:type owl:NamedIndividual ,
+                           :Data ;
+                  rdfs:label "Shopping-Cart Data"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/SlidingWindow
@@ -906,6 +984,12 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :TripleDataModel rdf:type owl:NamedIndividual ,
                           :DataModel ;
                  rdfs:label "Triple Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/UserProfileData
+:UserProfileData rdf:type owl:NamedIndividual ,
+                          :Data ;
+                 rdfs:label "User-Profile Data"@en .
 
 
 #################################################################
