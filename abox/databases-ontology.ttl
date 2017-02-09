@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/ontologies/databases/> .
+@prefix db: <http://www.semanticweb.org/ontologies/databases/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -26,13 +26,13 @@
 
 dbr:Oracle_Database rdf:type owl:NamedIndividual;
 				rdfs:label "Oracle" ;
-				:hasDataModel :RelationalDataModel.
+				db:hasDataModel db:RelationalDataModel.
 
 dbr:Oracle_Database2 rdf:type owl:NamedIndividual;
 				rdfs:label "Oracle2" ;
-				:hasDataModel :RelationalDataModel.
+				db:hasDataModel db:RelationalDataModel.
 				
 :Stardog rdf:type owl:NamedIndividual ;
-         :hasDataModel :TripleDataModel ;
-		 :hasReplicationProtocol :MasterSlaveSynchronousReplication.
+         db:hasDataModel db:TripleDataModel ;
+		 db:hasReplicationProtocol db:MasterSlaveSynchronousReplication.
 				
