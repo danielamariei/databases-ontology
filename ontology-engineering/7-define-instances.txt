@@ -121,6 +121,23 @@ Concepts
 	BASE
 	
 Axioms	
+
+
+
+---------
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasStorageModel ;
+  owl:hasValue :ColumnOriented ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :isSuitableForSoftwareApplication ;
+                        owl:hasValue [ rdf:type owl:Restriction;
+						owl:onProperty :usesOperation;
+						owl:hasValue :OLAP]
+						]
+] .
+
+
+
 	:MasterSlaveAsynchronousReplication rdf:type owl:Class ;
 										owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
 																					 owl:onProperty :hasReplicationConfigurationStrategy ;

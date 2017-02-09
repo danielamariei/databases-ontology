@@ -94,14 +94,14 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                         rdfs:label "Has Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataSchemaModel
-:hasDataSchemaModel rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:domain :DatabaseManagementSystem ;
-                    rdfs:range :DataSchema ;
-                    rdfs:comment "This property specifies the data schema constraints for a particular DBMS."@en ;
-                    rdfs:label "Has Data Schema"@en .
+###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
+:hasDataSchema rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :DatabaseManagementSystem ;
+               rdfs:range :DataSchema ;
+               rdfs:comment "This property specifies the data schema constraints for a particular DBMS."@en ;
+               rdfs:label "Has Data Schema"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasDeveloper
@@ -185,6 +185,15 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                            rdfs:label "Has Transaction Granularity"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/isSuitableForSoftwareApplication
+:isSuitableForSoftwareApplication rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  rdfs:domain :DatabaseManagementSystem ;
+                                  rdfs:range :SoftwareApplication ;
+                                  rdfs:comment "This property specifies the application type for which a particular DBMS is suitable for."@en ;
+                                  rdfs:label "Is Suitable for Software Application"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/supportsOperatingSystem
 :supportsOperatingSystem rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
@@ -233,10 +242,6 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                rdfs:range :Operation ;
                rdfs:comment "This property specifies the operation type used by a particular software applicatoin."@en ;
                rdfs:label "Uses Operation"@en .
-
-
-###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 
 #################################################################
@@ -346,6 +351,11 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
+:AnalyticsSoftwareApplication rdf:type owl:Class ;
+                              rdfs:subClassOf :SoftwareApplication .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
                                  owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -442,10 +452,6 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 :DataSchema rdf:type owl:Class ;
             rdfs:comment "The class of data schemas (e.g., rigid schema, flexible schema, etc.)."@en ;
             rdfs:label "Data Schema"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/DataSchemaModel
-:DataSchemaModel rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Database
@@ -599,6 +605,7 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/ReplicationProtocol
 :ReplicationProtocol rdf:type owl:Class ;
+                     rdfs:subClassOf :DatabaseManagementSystem ;
                      rdfs:comment "The class of replication protocols."@en ;
                      rdfs:label "Replication Protocol"@en .
 
@@ -618,7 +625,7 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/SoftwareApplication
 :SoftwareApplication rdf:type owl:Class ;
-                     rdfs:comment "The classl of software applications."@en ;
+                     rdfs:comment "The class of software applications."@en ;
                      rdfs:label "Software Application"@en .
 
 
@@ -701,6 +708,10 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                rdfs:label "Analytics Data"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
+:AnalyticsSoftwareApplication rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
 :AsynchronousReplication rdf:type owl:NamedIndividual ,
                                   :ReplicationSynchronizationStrategy ;
@@ -746,7 +757,7 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/FlexibleSchema
 :FlexibleSchema rdf:type owl:NamedIndividual ,
-                         :DataSchemaModel ;
+                         :DataSchema ;
                 rdfs:label "Flexible Schema"@en .
 
 
@@ -921,7 +932,7 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 ###  http://www.semanticweb.org/ontologies/databases/RigidSchema
 :RigidSchema rdf:type owl:NamedIndividual ,
-                      :DataSchemaModel ;
+                      :DataSchema ;
              rdfs:label "Rigid Schema"@en .
 
 
@@ -993,6 +1004,14 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
 
 
 #################################################################
+#    Annotations
+#################################################################
+
+:AnalyticsSoftwareApplication rdfs:label "Analytics Software Application"@en ;
+                              rdfs:comment "The class of analytics software applications."@en .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
@@ -1003,6 +1022,47 @@ owl:topObjectProperty rdfs:domain :DatabaseManagementSystem .
                         owl:onProperty :supportsReplication ;
                         owl:hasValue "true"^^xsd:boolean
                       ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasStorageModel ;
+  owl:hasValue :ColumnOriented ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :isSuitableForSoftwareApplication ;
+                        owl:hasValue :AnalyticsSoftwareApplication
+                      ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasStorageModel ;
+  owl:hasValue :ColumnOriented ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :usesOperation ;
+                        owl:hasValue :OLAP
+                      ]
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Caching
+                :Concurrency
+                :ConcurrencyControlMechanism
+                :Consistency
+                :Data
+                :DataModel
+                :DataPartitioning
+                :DataPartitioningStrategy
+                :DataProcessingModel
+                :DataSchema
+                :DatabaseManagementSystem
+                :License
+                :ReplicationConfigurationStrategy
+                :SoftwareApplication
+                :StorageModel
+                :StorageTechnology
+              )
 ] .
 
 
