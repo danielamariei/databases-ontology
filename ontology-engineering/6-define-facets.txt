@@ -75,6 +75,7 @@ Taxonomy
 	Caching
 	
 Properties
+	All properties with a xsd:boolean range are functional.
 	
 NamedIndividuals	
 	DataModel

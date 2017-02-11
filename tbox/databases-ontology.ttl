@@ -129,6 +129,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/ontologies/databases/hasReplicationConfigurationStrategy
 :hasReplicationConfigurationStrategy rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain :DatabaseManagementSystem ;
                                      rdfs:range :ReplicationConfigurationStrategy ;
                                      rdfs:comment "This property specifies the replication configuration strategy supported by a particular DBMS."@en ;
                                      rdfs:label "Has Replication Configuration Strategy"@en .
@@ -146,7 +147,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/ontologies/databases/hasReplicationSynchronizationStrategy
 :hasReplicationSynchronizationStrategy rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                       rdfs:domain :ReplicationSynchronizationStrategy ;
+                                       rdfs:domain :DatabaseManagementSystem ;
                                        rdfs:range :ReplicationSynchronizationStrategy ;
                                        rdfs:comment "This property specifies the replication synchronization strategy supported by a particular DBMS."@en ;
                                        rdfs:label "Has Replication Synchronization Strategy"@en .
