@@ -28,28 +28,6 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataModel
-db:hasDataModel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
-db:hasDataSchema rdf:type owl:AnnotationProperty .
-
-
-###  http://www.semanticweb.org/ontologies/databases/hasLicense
-db:hasLicense rdf:type owl:AnnotationProperty .
-
-
-###  http://www.semanticweb.org/ontologies/databases/hasReplicationProtocol
-db:hasReplicationProtocol rdf:type owl:AnnotationProperty .
-
-
-###  http://www.semanticweb.org/ontologies/databases/supportsIndexing
-db:supportsIndexing rdf:type owl:AnnotationProperty .
-
-
-###  http://www.semanticweb.org/ontologies/databases/supportsTyping
-db:supportsTyping rdf:type owl:AnnotationProperty .
 
 
 #################################################################
