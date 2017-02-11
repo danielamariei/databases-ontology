@@ -39,21 +39,15 @@
     
 
 
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#comment -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#comment"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#concept -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#concept"/>
-    
-
-
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#label"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
     
 
 
@@ -858,7 +852,7 @@
     <!-- http://www.semanticweb.org/ontologies/databases/Replication -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/databases/Replication">
-        <rdf:concept xml:lang="en">The concept of replication</rdf:concept>
+        <rdfs:comment xml:lang="en">The concept of replication</rdfs:comment>
     </owl:Class>
     
 
@@ -982,7 +976,7 @@
     <!-- http://www.semanticweb.org/ontologies/databases/Trigger -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/databases/Trigger">
-        <rdf:concept xml:lang="en">The concept of trigger</rdf:concept>
+        <rdfs:comment xml:lang="en">The concept of trigger</rdfs:comment>
     </owl:Class>
     
 
@@ -1198,7 +1192,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/databases/MapReduce">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/databases/BatchProcessingModel"/>
-        <rdf:comment xml:lang="en">The concept of MapReduce, a distributed, batch, data processing model.</rdf:comment>
+        <rdfs:comment xml:lang="en">The concept of MapReduce, a distributed, batch, data processing model.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1437,7 +1431,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/databases/SlidingWindow">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/databases/StreamProcessingModel"/>
-        <rdf:comment xml:lang="en">The concept of sliding-window processing model data processing model.</rdf:comment>
+        <rdfs:comment xml:lang="en">The concept of sliding-window processing model data processing model.</rdfs:comment>
     </owl:NamedIndividual>
     
 

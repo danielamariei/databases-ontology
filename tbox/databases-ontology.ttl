@@ -29,16 +29,12 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#comment
-rdf:comment rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#concept
-rdf:concept rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
 rdf:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#commnet
@@ -605,7 +601,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/Replication
 :Replication rdf:type owl:Class ;
-             rdf:concept "The concept of replication"@en .
+             rdfs:comment "The concept of replication"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/ReplicationConfigurationStrategy
@@ -688,7 +684,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/Trigger
 :Trigger rdf:type owl:Class ;
-         rdf:concept "The concept of trigger"@en .
+         rdfs:comment "The concept of trigger"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/TripleStoreDBMS
@@ -830,7 +826,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 ###  http://www.semanticweb.org/ontologies/databases/MapReduce
 :MapReduce rdf:type owl:NamedIndividual ,
                     :BatchProcessingModel ;
-           rdf:comment "The concept of MapReduce, a distributed, batch, data processing model."@en .
+           rdfs:comment "The concept of MapReduce, a distributed, batch, data processing model."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveAsynchronousReplication
@@ -994,7 +990,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 ###  http://www.semanticweb.org/ontologies/databases/SlidingWindow
 :SlidingWindow rdf:type owl:NamedIndividual ,
                         :StreamProcessingModel ;
-               rdf:comment "The concept of sliding-window processing model data processing model."@en .
+               rdfs:comment "The concept of sliding-window processing model data processing model."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/StrongConsistency
