@@ -22,8 +22,7 @@
                                                         dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
                                                         dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
                                                         dc:title "Databases Ontology"@en ;
-                                                        dc:creator "Daniel Amariei"@en ;
-                                                        dc:contributor "Ioana Bîrsan"@en .
+                                                        dc:creator "Daniel Amariei"@en .
 
 #################################################################
 #    Annotation properties
