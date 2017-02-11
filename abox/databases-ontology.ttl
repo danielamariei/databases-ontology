@@ -1,3 +1,4 @@
+@prefix : <http://www.semanticweb.org/ontologies/databases/abox#> .
 @prefix db: <http://www.semanticweb.org/ontologies/databases/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
@@ -12,27 +13,246 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
-@base <http://www.semanticweb.org/ontologies/databases/> .
+@base <http://www.semanticweb.org/ontologies/databases/abox> .
 
 <http://www.semanticweb.org/ontologies/databases/abox> rdf:type owl:Ontology ;
-                                                    dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
-                                                    rdfs:label "Databases Ontology"@en ;
-                                                    rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
-                                                    dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:title "Databases Ontology"@en ;
-                                                    dc:creator "Daniel Amariei"@en ;
-                                                    dc:contributor "Ioana Bîrsan"@en .
+                                                        dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
+                                                        rdfs:label "Databases Ontology"@en ;
+                                                        rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                        dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ;
+                                                        dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                        dc:title "Databases Ontology"@en ;
+                                                        dc:creator "Daniel Amariei"@en ;
+                                                        dc:contributor "Ioana Bîrsan"@en .
 
-dbr:Oracle_Database rdf:type owl:NamedIndividual;
-				rdfs:label "Oracle" ;
-				db:hasDataModel db:RelationalDataModel.
+#################################################################
+#    Annotation properties
+#################################################################
 
-dbr:Oracle_Database2 rdf:type owl:NamedIndividual;
-				rdfs:label "Oracle2" ;
-				db:hasDataModel db:RelationalDataModel.
-				
+###  http://www.semanticweb.org/ontologies/databases/hasDataModel
+db:hasDataModel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
+db:hasDataSchema rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/databases/hasLicense
+db:hasLicense rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/databases/hasReplicationProtocol
+db:hasReplicationProtocol rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/databases/supportsIndexing
+db:supportsIndexing rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/databases/supportsTyping
+db:supportsTyping rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Oracle_Database
+dbr:Oracle_Database rdf:type owl:NamedIndividual ;
+                    owl:sameAs db:Oracle ;
+                    db:hasDataModel db:RelationalDataModel ;
+                    db:hasDataSchema db:Rigid ;
+                    db:hasLicense db:Commercial ;
+                    db:supportsIndexing "true"^^xsd:boolean ;
+                    db:supportsTyping "true"^^xsd:boolean ;
+                    rdfs:label "Oracle" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApacheJena
+db:ApacheJena rdf:type owl:NamedIndividual ;
+              db:hasDataModel db:TripleDataModel ;
+              db:hasDataSchema db:Flexible ;
+              db:hasLicense db:OpenSource ;
+              db:supportsIndexing "true"^^xsd:boolean ;
+              db:supportsTyping "true"^^xsd:boolean ;
+              rdfs:label "ApacheJena" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Cassandra
+db:Cassandra rdf:type owl:NamedIndividual ;
+             db:hasDataModel db:ColumnFamilyDataModel ;
+             db:hasDataSchema db:Flexible ;
+             db:hasLicense db:OpenSource ;
+             db:supportsIndexing "true"^^xsd:boolean ;
+             db:supportsTyping "true"^^xsd:boolean ;
+             rdfs:label "Cassandra" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Cloudant
+db:Cloudant rdf:type owl:NamedIndividual ;
+            db:hasDataModel db:DocumentDataModel ;
+            db:hasDataSchema db:Flexible ;
+            db:hasLicense db:Commercial ;
+            db:supportsIndexing "true"^^xsd:boolean ;
+            db:supportsTyping "false"^^xsd:boolean ;
+            rdfs:label "Cloudant" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DB2
+db:DB2 rdf:type owl:NamedIndividual ;
+       db:hasDataModel db:RelationalDataModel ;
+       db:hasDataSchema db:Rigid ;
+       db:hasLicense db:Commercial ;
+       db:supportsIndexing "true"^^xsd:boolean ;
+       db:supportsTyping "true"^^xsd:boolean ;
+       rdfs:label "DB2" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/DynamoDB
+db:DynamoDB rdf:type owl:NamedIndividual ;
+            db:hasDataModel db:DocumentDataModel ;
+            db:hasDataSchema db:Flexible ;
+            db:hasLicense db:Commercial ;
+            db:supportsIndexing "true"^^xsd:boolean ;
+            db:supportsTyping "true"^^xsd:boolean ;
+            rdfs:label "DynamoDB" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/HBase
+db:HBase rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:ColumnFamilyDataModel ;
+         db:hasDataSchema db:Flexible ;
+         db:hasLicense db:OpenSource ;
+         db:supportsIndexing "true"^^xsd:boolean ;
+         db:supportsTyping "false"^^xsd:boolean ;
+         rdfs:label "HBase" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Hive
+db:Hive rdf:type owl:NamedIndividual ;
+        db:hasDataModel db:RelationalDataModel ;
+        db:hasDataSchema db:Rigid ;
+        db:hasLicense db:OpenSource ;
+        db:supportsIndexing "true"^^xsd:boolean ;
+        db:supportsTyping "true"^^xsd:boolean ;
+        rdfs:label "Hive" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Hypertable
+db:Hypertable rdf:type owl:NamedIndividual ;
+              db:hasDataModel db:ColumnFamilyDataModel ;
+              db:hasDataSchema db:Flexible ;
+              db:hasLicense db:OpenSource ;
+              db:supportsIndexing "true"^^xsd:boolean ;
+              db:supportsTyping "false"^^xsd:boolean ;
+              rdfs:label "Hypertable" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Memchached
+db:Memchached rdf:type owl:NamedIndividual ;
+              db:hasDataModel db:KeyValueDataModel ;
+              db:hasDataSchema db:Flexible ;
+              db:hasLicense db:OpenSource ;
+              db:supportsIndexing "true"^^xsd:boolean ;
+              db:supportsTyping "false"^^xsd:boolean ;
+              rdfs:label "Memchached" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MongoDB
+db:MongoDB rdf:type owl:NamedIndividual ;
+           db:hasDataModel db:DocumentDataModel ;
+           db:hasDataSchema db:Flexible ;
+           db:hasLicense db:OpenSource ;
+           db:supportsIndexing "true"^^xsd:boolean ;
+           db:supportsTyping "true"^^xsd:boolean ;
+           rdfs:label "MongoDB" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/MySQL
+db:MySQL rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:RelationalDataModel ;
+         db:hasDataSchema db:Rigid ;
+         db:hasLicense db:OpenSource ;
+         db:supportsIndexing "true"^^xsd:boolean ;
+         db:supportsTyping "true"^^xsd:boolean ;
+         rdfs:label "MySQL" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Neo4j
+db:Neo4j rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:GraphDataModel ;
+         db:hasDataSchema db:Flexible ;
+         db:hasLicense db:Commercial ,
+                       db:OpenSource ;
+         db:supportsIndexing "true"^^xsd:boolean ;
+         db:supportsTyping "true"^^xsd:boolean ;
+         rdfs:label "Cloudant" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Oracle
+db:Oracle rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RavenDB
+db:RavenDB rdf:type owl:NamedIndividual ;
+           db:hasDataModel db:DocumentDataModel ;
+           db:hasDataSchema db:Flexible ;
+           db:hasLicense db:OpenSource ;
+           db:supportsIndexing "true"^^xsd:boolean ;
+           db:supportsTyping "false"^^xsd:boolean ;
+           rdfs:label "RavenDB" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Redis
+db:Redis rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:KeyValueDataModel ;
+         db:hasDataSchema db:Flexible ;
+         db:hasLicense db:OpenSource ;
+         db:supportsIndexing "true"^^xsd:boolean ;
+         db:supportsTyping "true"^^xsd:boolean ;
+         rdfs:label "Redis" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/RiakKV
+db:RiakKV rdf:type owl:NamedIndividual ;
+          db:hasDataModel db:KeyValueDataModel ;
+          db:hasDataSchema db:Flexible ;
+          db:hasLicense db:OpenSource ;
+          db:supportsIndexing "false"^^xsd:boolean ;
+          db:supportsTyping "true"^^xsd:boolean ;
+          rdfs:label "RiakKV" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/SQLite
+db:SQLite rdf:type owl:NamedIndividual ;
+          db:hasDataModel db:RelationalDataModel ;
+          db:hasDataSchema db:Rigid ;
+          db:hasLicense db:OpenSource ;
+          db:supportsIndexing "true"^^xsd:boolean ;
+          db:supportsTyping "true"^^xsd:boolean ;
+          rdfs:label "SQLite" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Stardog
 db:Stardog rdf:type owl:NamedIndividual ;
-         db:hasDataModel db:TripleDataModel ;
-		 db:hasReplicationProtocol db:MasterSlaveSynchronousReplication.
-				
+           db:hasDataModel db:TripleDataModel ;
+           db:hasDataSchema db:Flexible ;
+           db:hasLicense db:Commercial ,
+                         db:Free ;
+           db:hasReplicationProtocol db:MasterSlaveSynchronousReplication ;
+           db:supportsIndexing "true"^^xsd:boolean ;
+           db:supportsTyping "true"^^xsd:boolean ;
+           rdfs:label "Stardog" .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Titan
+db:Titan rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:GraphDataModel ;
+         db:hasDataSchema db:Flexible ;
+         db:hasLicense db:OpenSource ;
+         db:supportsIndexing "true"^^xsd:boolean ;
+         db:supportsTyping "true"^^xsd:boolean ;
+         rdfs:label "Titan" .
+
+
+###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi

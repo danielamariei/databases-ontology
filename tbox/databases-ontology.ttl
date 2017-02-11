@@ -636,6 +636,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/SoftwareApplication
 :SoftwareApplication rdf:type owl:Class ;
+                     rdfs:subClassOf :SoftwareProduct ;
                      rdfs:comment "The class of software applications."@en ;
                      rdfs:label "Software Application"@en .
 
@@ -745,6 +746,11 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 rdfs:label "Column-Oriented"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/Commercial
+:Commercial rdf:type owl:NamedIndividual ,
+                     :SoftwareLicense .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/ConfigurableConsistency
 :ConfigurableConsistency rdf:type owl:NamedIndividual ,
                                   :ConsistencyModel ;
@@ -774,6 +780,11 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :FlexibleSchema rdf:type owl:NamedIndividual ,
                          :DataSchema ;
                 rdfs:label "Flexible Schema"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/Free
+:Free rdf:type owl:NamedIndividual ,
+               :SoftwareLicense .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/GraphDataModel
@@ -883,6 +894,11 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :OnDiskStorage rdf:type owl:NamedIndividual ,
                         :StorageTechnology ;
                rdfs:label "On-Disk Storage"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/OpenSource
+:OpenSource rdf:type owl:NamedIndividual ,
+                     :SoftwareLicense .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/PeerToPeerAsynchronousReplication
