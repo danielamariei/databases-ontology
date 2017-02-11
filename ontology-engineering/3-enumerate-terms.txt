@@ -4,75 +4,154 @@ Resources:
 	* Web Application Development: http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html
 
 Concepts
-	Database
-	DistributedDatabase
-	RelationalDatabase
-	KeyValueDatabase
-	ColumnFamilyDatabase
-	DocumentDatabase
-	GraphDatabase
-	TripleStore
-	SemistructuredDatabase
-	MiltivalueDatabase
-	ObjectOrientedDatabas
-	DatabaseManagementSystem
-	DataModel
-	Relational
-	KeyValue
-	Storage
-	InMemoryStorage
-	OnDiskStorage
-	MapReduce
-	InMemoryDatabase
-	OnDiskDatabase
-	ColumnFamily
-	Document
-	Trigger
-	ServerSideScript
-	Semistructured
-	Graph
-	Consistency
-	EventualConsistency
-	StrongConsistency
-	ConfigurableConsistency
-	ConcurrencyControlMechanism
-	StorageModel
-	RowOriented
-	ColumnOriented
-	SoftwareProduct
-	DataProcessingModel
-	BatchProcessing
-	StreamProcessing
-	Concurrency
-	Durability
-	License
-	SoftwareLicense
-	Replication
-	ReplicationFactor
-	ReplicationProtocol
-	MasterSlaveEagerReplication
-	MasterSlaveLazyReplication
-	PeerToPeerEagerReplication
-	PeerToPeerLazyReplication
-	ReplicationConfigurationStrategy
-	MasterSlaveReplication
-	PeerToPeerReplication
-	ReplicationSynchronizationStrategy
-	AsynchronousReplication
-	SynchronousReplication
-	DataPartitioning
-	DataPartitioningStrategy
-	ListPartitioning
-	RangePartitioning
-	HashPartitioning
-	Schema
-	FlexibleSchema
-	RigidSchema
-	Caching
-	ACID
-	BASE
-	
-	
+	Concatenated 
+		Database
+		DistributedDatabase
+		RelationalDatabase
+		KeyValueDatabase
+		ColumnFamilyDatabase
+		DocumentDatabase
+		GraphDatabase
+		TripleStore
+		SemistructuredDatabase
+		MiltivalueDatabase
+		ObjectOrientedDatabas
+		DatabaseManagementSystem
+		DataModel
+		Relational
+		KeyValue
+		Storage
+		InMemoryStorage
+		OnDiskStorage
+		MapReduce
+		InMemoryDatabase
+		OnDiskDatabase
+		ColumnFamily
+		Document
+		Trigger
+		ServerSideScript
+		Semistructured
+		Graph
+		Consistency
+		EventualConsistency
+		StrongConsistency
+		ConfigurableConsistency
+		ConcurrencyControlMechanism
+		StorageModel
+		RowOriented
+		ColumnOriented
+		SoftwareProduct
+		DataProcessingModel
+		BatchProcessing
+		StreamProcessing
+		Concurrency
+		Durability
+		License
+		SoftwareLicense
+		Replication
+		ReplicationFactor
+		ReplicationProtocol
+		MasterSlaveEagerReplication
+		MasterSlaveLazyReplication
+		PeerToPeerEagerReplication
+		PeerToPeerLazyReplication
+		ReplicationConfigurationStrategy
+		MasterSlaveReplication
+		PeerToPeerReplication
+		ReplicationSynchronizationStrategy
+		AsynchronousReplication
+		SynchronousReplication
+		DataPartitioning
+		DataPartitioningStrategy
+		ListPartitioning
+		RangePartitioning
+		HashPartitioning
+		Schema
+		FlexibleSchema
+		RigidSchema
+		Caching
+		ACID
+		BASE
+	Not concatenated	
+		Asynchronous Replication
+		Batch Processing
+		Caching
+		Column-Family DBMS
+		Column-Family Data Model
+		Column-Oriented DBMS
+		Concurrency
+		Concurrency Control Mechanism
+		Configurable Consistency
+		Consistency
+		Consistency Model
+		Data
+		Data Model
+		Data Partitioning
+		Data Partitioning Strategy
+		Data Processing Model
+		Database
+		Database Management System
+		Distributed DBMS
+		Document
+		Document DBMS
+		Document Data Model
+		Durability
+		Eventual Consistency
+		Flexible Schema
+		Graph
+		Graph DBMS
+		Graph Data Model
+		Hash Partitioning
+		In-Memory DBMS
+		In-Memory Storage
+		Key-Value
+		Key-Value DBMS
+		Key-Value Data Model
+		License
+		List Partitioning
+		MapReduce
+		Master-Slave Eager Replication
+		Master-Slave Lazy Replication
+		Master-Slave Replication
+		Milti-Model DBMS
+		Object-Oriented DBMS
+		Object-Oriented Data Model
+		On-Disk DBMS
+		On-Disk Storage
+		Operation
+		Peer-to-Peer Eager Replication
+		Peer-to-Peer Lazy Replication
+		Peer-to-Peer Replication
+		Quad Data Model
+		Quad-Store DBMS
+		Range Partitioning
+		Relational
+		Relational DBMS
+		Relational Data Model
+		Replication
+		Replication Configuration Strategy
+		Replication Factor
+		Replication Protocol
+		Replication Synchronization Strategy
+		Rigid Schema
+		Row-Oriented
+		Schema
+		Semistructured
+		Semistructured DBMS
+		Semistructured Data Model
+		Server-Side Script
+		Software Application 
+		Software License
+		Software Product
+		Storage
+		Storage Model
+		Stream Processing
+		Strong Consistency
+		Synchronous Replication
+		Trigger
+		Triple Data Model
+		Triple-Store DBMS
+
 Properties
 	hasLicense
 	hasDeveloper

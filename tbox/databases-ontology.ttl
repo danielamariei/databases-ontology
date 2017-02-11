@@ -116,6 +116,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :hasImplementationProgrammingLanguage rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf owl:topObjectProperty ;
                                       rdfs:domain :DatabaseManagementSystem ;
+                                      rdfs:range dbo:ProgrammingLanguage ;
                                       rdfs:comment "This property specifies the implementation programming language of a particular DBMS."@en ;
                                       rdfs:label "Has Implementation Programming Language"@en .
 
@@ -124,6 +125,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :hasLicense rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :DatabaseManagementSystem ;
+            rdfs:range :SoftwareLicense ;
             rdfs:comment "This property specifies the licensing restrictions."@en ;
             rdfs:label "Has License"@en .
 
@@ -140,6 +142,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :hasReplicationProtocol rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :DatabaseManagementSystem ;
+                        rdfs:range :ReplicationProtocol ;
                         rdfs:comment "This property specifies the replication protocol supported by a particular DBMS."@en ;
                         rdfs:label "Has Replication Protocol"@en .
 
@@ -148,6 +151,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :hasReplicationSynchronizationStrategy rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
                                        rdfs:domain :ReplicationSynchronizationStrategy ;
+                                       rdfs:range :ReplicationSynchronizationStrategy ;
                                        rdfs:comment "This property specifies the replication synchronization strategy supported by a particular DBMS."@en ;
                                        rdfs:label "Has Replication Synchronization Strategy"@en .
 
@@ -181,6 +185,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :hasTransactionGranularity rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain :DatabaseManagementSystem ;
+                           rdfs:range :TransactionGranularity ;
                            rdfs:comment "This property specifies the transaction granularity supported by a particular DBMS."@en ;
                            rdfs:label "Has Transaction Granularity"@en .
 
@@ -198,6 +203,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :supportsOperatingSystem rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :DatabaseManagementSystem ;
+                         rdfs:range :OperatingSystem ;
                          rdfs:comment "This property specifies the operating system supported by a particular DBMS."@en ;
                          rdfs:label "Supports Operating System"@en .
 
@@ -214,6 +220,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 :supportsProgrammingLanguage rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf owl:topObjectProperty ;
                              rdfs:domain :DatabaseManagementSystem ;
+                             rdfs:range dbo:ProgrammingLanguage ;
                              rdfs:comment "This property specifies the programming language supported by a particular DBMS."@en ;
                              rdfs:label "Supports Programming Language"@en .
 
@@ -350,6 +357,10 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://dbpedia.org/ontology/ProgrammingLanguage
+dbo:ProgrammingLanguage rdf:type owl:Class .
+
 
 ###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
 :AnalyticsSoftwareApplication rdf:type owl:Class ;
@@ -550,6 +561,10 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
             rdfs:label "On-Disk DBMS"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/OperatingSystem
+:OperatingSystem rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/Operation
 :Operation rdf:type owl:Class ;
            rdfs:comment "The class of operation types (e.g., OLTP, OLAP, query, transaction, etc.)."@en ;
@@ -605,7 +620,6 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/ontologies/databases/ReplicationProtocol
 :ReplicationProtocol rdf:type owl:Class ;
-                     rdfs:subClassOf :DatabaseManagementSystem ;
                      rdfs:comment "The class of replication protocols."@en ;
                      rdfs:label "Replication Protocol"@en .
 
@@ -666,6 +680,10 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of synchronous replication protocols."@en ;
                                 rdfs:label "Synchronous Replication Protocol"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/TransactionGranularity
+:TransactionGranularity rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Trigger

@@ -40,4 +40,7 @@ Basic qustions that need to be answered at this stage:
 	
 4. Who will use and maintain the ontology?
 
-	* At first, the author. With time, a community.
+	* At first, the author will be responsible for the use and 
+	  maintenance of the ontology. With time, we hope that a 
+	  community will form around it, and the responsibility will 
+	  shift towards it.
