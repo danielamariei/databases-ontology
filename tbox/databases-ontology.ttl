@@ -397,6 +397,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDBMS
 :ColumnFamilyDBMS rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasDataModel ;
+                                        owl:hasValue :ColumnFamilyDataModel
+                                      ] ;
                   rdfs:subClassOf :DatabaseManagementSystem ;
                   rdfs:comment "The class of column family DBMSs."@en ;
                   rdfs:label "Column Family DBMS"@en .
@@ -483,6 +487,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/DocumentDBMS
 :DocumentDBMS rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDataModel ;
+                                    owl:hasValue :DocumentDataModel
+                                  ] ;
               rdfs:subClassOf :DatabaseManagementSystem ;
               rdfs:comment "The class of document DBMSs."@en ;
               rdfs:label "Document DBMS"@en .
@@ -503,6 +511,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
 :GraphDBMS rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDataModel ;
+                                 owl:hasValue :GraphDataModel
+                               ] ;
            rdfs:subClassOf :DatabaseManagementSystem ;
            rdfs:comment "The class of graph DBMSs."@en ;
            rdfs:label "Graph DBMS"@en .
@@ -517,6 +529,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/KeyValueDBMS
 :KeyValueDBMS rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDataModel ;
+                                    owl:hasValue :KeyValueDataModel
+                                  ] ;
               rdfs:subClassOf :DatabaseManagementSystem ;
               rdfs:comment "The class of key-value DBMSs."@en ;
               rdfs:label "Key-Value DBMS"@en .
@@ -551,6 +567,14 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 rdfs:label "Multi-Model DBMS"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/ObjectOrientedDBMS
+:ObjectOrientedDBMS rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasDataModel ;
+                                          owl:hasValue :ObjectOrientedDataModel
+                                        ] .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/OnDiskDBMS
 :OnDiskDBMS rdf:type owl:Class ;
             rdfs:subClassOf :DatabaseManagementSystem ;
@@ -581,6 +605,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/QuadStoreDBMS
 :QuadStoreDBMS rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDataModel ;
+                                     owl:hasValue :QuadDataModel
+                                   ] ;
                rdfs:subClassOf :GraphDBMS ;
                rdfs:comment "The class of Quad store DBMSs."@en ;
                rdfs:label "Quad Store DBMS"@en .
@@ -595,6 +623,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/RelationalDBMS
 :RelationalDBMS rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasDataModel ;
+                                      owl:hasValue :RelationalDataModel
+                                    ] ;
                 rdfs:subClassOf :DatabaseManagementSystem ;
                 rdfs:comment "The class of relational DBMSs."@en ;
                 rdfs:label "Relational DBMS"@en .
@@ -629,6 +661,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/SemistructuredDBMS
 :SemistructuredDBMS rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasDataModel ;
+                                          owl:hasValue :SemistructuredDataModel
+                                        ] ;
                     rdfs:subClassOf :DatabaseManagementSystem ;
                     rdfs:comment "The class of semistructured DBMSs."@en ;
                     rdfs:label "Semistructured DBMS"@en .
