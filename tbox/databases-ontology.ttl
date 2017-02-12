@@ -359,11 +359,6 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 dbo:ProgrammingLanguage rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
-:AnalyticsSoftwareApplication rdf:type owl:Class ;
-                              rdfs:subClassOf :SoftwareApplication .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
                                  owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -380,13 +375,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                       rdfs:subClassOf :DataProcessingModel ;
                       rdfs:comment "The class of batch processing models."@en ;
                       rdfs:label "Batch Processing Model"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/CMSSoftwareApplication
-:CMSSoftwareApplication rdf:type owl:Class ;
-                        rdfs:subClassOf :SoftwareApplication ;
-                        rdfs:comment "The class of CMS software applications."@en ;
-                        rdfs:label "CMS Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Caching
@@ -502,13 +490,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
             rdfs:label "Durability"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/E-CommerceSoftwareApplication
-:E-CommerceSoftwareApplication rdf:type owl:Class ;
-                               rdfs:subClassOf :SoftwareApplication ;
-                               rdfs:comment "The class of E-Commerce software applications."@en ;
-                               rdfs:label "E-Commerce Software Application"@en .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
 :GraphDBMS rdf:type owl:Class ;
            owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -542,13 +523,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :License rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
-:LowLatencySoftwareApplication rdf:type owl:Class ;
-                               rdfs:subClassOf :SoftwareApplication ;
-                               rdfs:comment "The class of low-latency software applications."@en ;
-                               rdfs:label "Low-Latency Software Application"@en .
-
-
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
 :MasterSlaveReplicationProtocol rdf:type owl:Class ;
                                 owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -572,7 +546,8 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasDataModel ;
                                           owl:hasValue :ObjectOrientedDataModel
-                                        ] .
+                                        ] ;
+                    rdfs:subClassOf :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/OnDiskDBMS
@@ -612,13 +587,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                rdfs:subClassOf :GraphDBMS ;
                rdfs:comment "The class of Quad store DBMSs."@en ;
                rdfs:label "Quad Store DBMS"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/RecommendationSoftwareApplication
-:RecommendationSoftwareApplication rdf:type owl:Class ;
-                                   rdfs:subClassOf :SoftwareApplication ;
-                                   rdfs:comment "The class of recommendation software applications."@en ;
-                                   rdfs:label "Recommendation Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/RelationalDBMS
@@ -761,13 +729,22 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
-:AnalyticsSoftwareApplication rdf:type owl:NamedIndividual .
+:AnalyticsSoftwareApplication rdf:type owl:NamedIndividual ,
+                                       :SoftwareApplication ;
+                              rdfs:comment "The class of analytics software applications."@en ;
+                              rdfs:label "Analytics Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
 :AsynchronousReplication rdf:type owl:NamedIndividual ,
                                   :ReplicationSynchronizationStrategy ;
                          rdfs:label "Asynchronous Replication"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/CMSSoftwareApplication
+:CMSSoftwareApplication rdf:type owl:NamedIndividual ,
+                                 :SoftwareApplication ;
+                        rdfs:label "CMS Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDataModel
@@ -797,6 +774,12 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :DocumentDataModel rdf:type owl:NamedIndividual ,
                             :DataModel ;
                    rdfs:label "Document Data Model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/E-CommerceSoftwareApplication
+:E-CommerceSoftwareApplication rdf:type owl:NamedIndividual ,
+                                        :SoftwareApplication ;
+                               rdfs:label "E-Commerce Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/EventualConsistency
@@ -869,6 +852,12 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :LogData rdf:type owl:NamedIndividual ,
                   :Data ;
          rdfs:label "Log Data"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
+:LowLatencySoftwareApplication rdf:type owl:NamedIndividual ,
+                                        :SoftwareApplication ;
+                               rdfs:label "Low-Latency Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MapReduce
@@ -991,6 +980,12 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                    rdfs:label "Range Partitioning"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/RecommendationSoftwareApplication
+:RecommendationSoftwareApplication rdf:type owl:NamedIndividual ,
+                                            :SoftwareApplication ;
+                                   rdfs:label "Recommendation Software Application"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/RelationalDataModel
 :RelationalDataModel rdf:type owl:NamedIndividual ,
                               :DataModel ;
@@ -1068,14 +1063,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :UserProfileData rdf:type owl:NamedIndividual ,
                           :Data ;
                  rdfs:label "User-Profile Data"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:AnalyticsSoftwareApplication rdfs:label "Analytics Software Application"@en ;
-                              rdfs:comment "The class of analytics software applications."@en .
 
 
 #################################################################
