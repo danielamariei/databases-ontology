@@ -504,7 +504,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 ###  http://www.semanticweb.org/ontologies/databases/InMemoryDBMS
 :InMemoryDBMS rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                    owl:onProperty owl:hasStorageTechnology ;
+                                    owl:onProperty :hasStorageTechnology ;
                                     owl:hasValue :InMemoryStorage
                                   ] ;
               rdfs:subClassOf :DatabaseManagementSystem ;
@@ -1108,6 +1108,16 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty :isSuitableForSoftwareApplication ;
                         owl:hasValue :OLAP
+                      ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasStorageTechnology ;
+  owl:hasValue :InMemoryStorage ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :isSuitableForSoftwareApplication ;
+                        owl:hasValue :LowLatencySoftwareApplication
                       ]
 ] .
 

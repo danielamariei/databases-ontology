@@ -128,6 +128,7 @@ db:Hypertable rdf:type owl:NamedIndividual ;
 ###  http://www.semanticweb.org/ontologies/databases/Memchached
 db:Memchached rdf:type owl:NamedIndividual ;
               db:hasDataModel db:KeyValueDataModel ;
+              db:hasStorageTechnology db:InMemoryStorage ;
               db:hasDataSchema db:Flexible ;
               db:hasLicense db:OpenSource ;
               db:supportsIndexing "true"^^xsd:boolean ;
@@ -163,7 +164,7 @@ db:Neo4j rdf:type owl:NamedIndividual ;
                        db:OpenSource ;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "true"^^xsd:boolean ;
-         rdfs:label "Cloudant" .
+         rdfs:label "Neo4j" .
 		 
 db:MapRDB rdf:type owl:NamedIndividual ;
          db:hasDataModel db:DocumentDataModel ;
