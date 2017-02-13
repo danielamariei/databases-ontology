@@ -164,6 +164,13 @@ db:Neo4j rdf:type owl:NamedIndividual ;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "true"^^xsd:boolean ;
          rdfs:label "Cloudant" .
+		 
+db:MapRDB rdf:type owl:NamedIndividual ;
+         db:hasDataModel db:DocumentDataModel ;
+         db:hasDataModel db:ColumnFamilyDataModel ;
+         db:hasDataSchema db:Flexible ;
+         db:hasLicense db:Commercial ;
+         rdfs:label "MapR-DB" .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/Oracle

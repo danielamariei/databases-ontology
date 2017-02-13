@@ -248,6 +248,10 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                rdfs:label "Uses Operation"@en .
 
 
+###  http://www.w3.org/2002/07/owl#hasStorageTechnology
+owl:hasStorageTechnology rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -361,10 +365,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
-                                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :hasReplicationSynchronizationStrategy ;
-                                                       owl:hasValue :AsynchronousReplication
-                                                     ] ;
                                  rdfs:subClassOf :ReplicationProtocol ;
                                  rdfs:comment "The class of asynchronous replication protocols."@en ;
                                  rdfs:label "Asynchronous Replication Protocol"@en .
@@ -503,6 +503,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/InMemoryDBMS
 :InMemoryDBMS rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty owl:hasStorageTechnology ;
+                                    owl:hasValue :InMemoryStorage
+                                  ] ;
               rdfs:subClassOf :DatabaseManagementSystem ;
               rdfs:comment "The class of in-memory DBMSs."@en ;
               rdfs:label "In-Memory DBMS"@en .
@@ -525,10 +529,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
 :MasterSlaveReplicationProtocol rdf:type owl:Class ;
-                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :hasReplicationConfigurationStrategy ;
-                                                      owl:hasValue :MasterSlaveReplication
-                                                    ] ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of master-slave replication protocols."@en ;
                                 rdfs:label "Master-Slave Replication Protocol"@en .
@@ -536,6 +536,17 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/MultiModelDBMS
 :MultiModelDBMS rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasDataModel ;
+                                                             owl:someValuesFrom :DataModel
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasDataModel ;
+                                                             owl:minCardinality "2"^^xsd:nonNegativeInteger
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                 rdfs:subClassOf :DatabaseManagementSystem ;
                 rdfs:comment "The class of multi-model DBMSs."@en ;
                 rdfs:label "Multi-Model DBMS"@en .
@@ -569,10 +580,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplicationProtocol
 :PeerToPeerReplicationProtocol rdf:type owl:Class ;
-                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :hasReplicationConfigurationStrategy ;
-                                                     owl:hasValue :PeerToPeerReplication
-                                                   ] ;
                                rdfs:subClassOf :ReplicationProtocol ;
                                rdfs:comment "The class of peer-to-peer replication protocols."@en ;
                                rdfs:label "Peer-to-Peer Replication Protocol"@en .
@@ -675,10 +682,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/ontologies/databases/SynchronousReplicationProtocol
 :SynchronousReplicationProtocol rdf:type owl:Class ;
-                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :hasReplicationSynchronizationStrategy ;
-                                                      owl:hasValue :SynchronousReplication
-                                                    ] ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of synchronous replication protocols."@en ;
                                 rdfs:label "Synchronous Replication Protocol"@en .
@@ -1080,6 +1083,16 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 
 
 [ rdf:type owl:Restriction ;
+  owl:onProperty :hasDataModel ;
+  owl:hasValue :GraphDataModel ;
+  owl:equivalentClass [ rdf:type owl:Restriction ;
+                        owl:onProperty :isSuitableForSoftwareApplication ;
+                        owl:hasValue :RecommendationSoftwareApplication
+                      ]
+] .
+
+
+[ rdf:type owl:Restriction ;
   owl:onProperty :hasStorageModel ;
   owl:hasValue :ColumnOriented ;
   owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -1093,14 +1106,15 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
   owl:onProperty :hasStorageModel ;
   owl:hasValue :ColumnOriented ;
   owl:equivalentClass [ rdf:type owl:Restriction ;
-                        owl:onProperty :usesOperation ;
+                        owl:onProperty :isSuitableForSoftwareApplication ;
                         owl:hasValue :OLAP
                       ]
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Caching
+  owl:members ( dbo:ProgrammingLanguage
+                :Caching
                 :Concurrency
                 :ConcurrencyControlMechanism
                 :Consistency
@@ -1112,10 +1126,13 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 :DataSchema
                 :DatabaseManagementSystem
                 :License
-                :ReplicationConfigurationStrategy
+                :OperatingSystem
+                :ReplicationProtocol
                 :SoftwareApplication
                 :StorageModel
                 :StorageTechnology
+                :TransactionGranularity
+                :Trigger
               )
 ] .
 
