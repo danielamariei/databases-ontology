@@ -26,3 +26,35 @@ SELECT ?db
 	
 SELECT ?db 
 	WHERE { ?db db:isSuitableForSoftwareApplication db:LowLatencySoftwareApplication . }	
+	
+
+SELECT ?db 
+WHERE { 
+  		?db db:isSuitableForSoftwareApplication ?app .
+       	?app rdf:type db:SoftwareApplication .
+       	?app db:usesData db:SessionData . 
+      }	
+
+	  
+SELECT ?db 
+	WHERE { ?db db:isNotSuitableForSoftwareApplication db:ApplicationThatUsesLinkedData . }
+
+
+				  [ rdf:type owl:Restriction ;
+					owl:onProperty :isSuitableForSoftwareApplication ;
+					owl:hasValue :LowLatencySoftwareApplication
+				  ] ;
+		   
+			rdfs:subClassOf [
+				rdf:type owl:Restriction ;
+				owl:onProperty :isSuitableForSoftwareApplication ;
+				owl:hasValuesFrom [
+					rdf:type owl:Restriction ;
+					owl:onProperty :usesData ;
+					owl:hasValue :SessionData
+				]
+			] ;		   
+			  :isSuitableForSoftwareApplication :ApplicationThatUsesLogData ,
+											:ApplicationThatUsesSessionData ,
+											:ApplicationThatUsesShoppingCartData ,
+											:ApplicationThatUsesUserProfileData .

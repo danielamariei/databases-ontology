@@ -187,6 +187,15 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                            rdfs:label "Has Transaction Granularity"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/isNotSuitableForSoftwareApplication
+:isNotSuitableForSoftwareApplication rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain :DatabaseManagementSystem ;
+                                     rdfs:range :SoftwareApplication ;
+                                     rdfs:comment "This property specifies the application type for which a particular DBMS is not suitable for."@en ;
+                                     rdfs:label "Is Not Suitable for Software Application"@en .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/isSuitableForSoftwareApplication
 :isSuitableForSoftwareApplication rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -248,13 +257,19 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                rdfs:label "Uses Operation"@en .
 
 
-###  http://www.w3.org/2002/07/owl#hasStorageTechnology
-owl:hasStorageTechnology rdf:type owl:ObjectProperty .
-
-
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://www.semanticweb.org/ontologies/databases/hasCurrentVersion
+:hasCurrentVersion rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :DatabaseManagementSystem ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "This property specifies the current version for a particular DBMS."@en ;
+                   rdfs:label "Has Current Version"@en .
+
 
 ###  http://www.semanticweb.org/ontologies/databases/hasCurrentVersionReleaseDate
 :hasCurrentVersionReleaseDate rdf:type owl:DatatypeProperty ;
@@ -274,6 +289,16 @@ owl:hasStorageTechnology rdf:type owl:ObjectProperty .
                               rdfs:range xsd:dateTime ;
                               rdfs:comment "This property specifies the initial version release date for a particular DBMS."@en ;
                               rdfs:label "Has Initial Version Release Date"@en .
+
+
+###  http://www.semanticweb.org/ontologies/databases/hasPriorVersion
+:hasPriorVersion rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :DatabaseManagementSystem ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "This property specifies the prior version for a particular DBMS."@en ;
+                 rdfs:label "Has Prior Version"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/hasWebsite
@@ -361,6 +386,96 @@ owl:hasStorageTechnology rdf:type owl:ObjectProperty .
 
 ###  http://dbpedia.org/ontology/ProgrammingLanguage
 dbo:ProgrammingLanguage rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesAnalyticsData
+:ApplicationThatUsesAnalyticsData rdf:type owl:Class ;
+                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :usesData ;
+                                                        owl:hasValue :AnalyticsData
+                                                      ] ;
+                                  rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesExpiringUsageData
+:ApplicationThatUsesExpiringUsageData rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :usesData ;
+                                                            owl:hasValue :ExpiringUsageDataData
+                                                          ] ;
+                                      rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLinkedData
+:ApplicationThatUsesLinkedData rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :usesData ;
+                                                     owl:hasValue :LinkedData
+                                                   ] ;
+                               rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLocationData
+:ApplicationThatUsesLocationData rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :usesData ;
+                                                       owl:hasValue :LocationData
+                                                     ] ;
+                                 rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLogData
+:ApplicationThatUsesLogData rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :usesData ;
+                                                  owl:hasValue :LogData
+                                                ] ;
+                            rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesPreferencesData
+:ApplicationThatUsesPreferencesData rdf:type owl:Class ;
+                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :usesData ;
+                                                          owl:hasValue :PreferencesData
+                                                        ] ;
+                                    rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesRoutingData
+:ApplicationThatUsesRoutingData rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :usesData ;
+                                                      owl:hasValue :RoutingData
+                                                    ] ;
+                                rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesSessionData
+:ApplicationThatUsesSessionData rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :usesData ;
+                                                      owl:hasValue :SessionData
+                                                    ] ;
+                                rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesShoppingCartData
+:ApplicationThatUsesShoppingCartData rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :usesData ;
+                                                           owl:hasValue :ShoppingCartData
+                                                         ] ;
+                                     rdfs:subClassOf :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesUserProfileData
+:ApplicationThatUsesUserProfileData rdf:type owl:Class ;
+                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :usesData ;
+                                                          owl:hasValue :UserProfileData
+                                                        ] ;
+                                    rdfs:subClassOf :SoftwareApplication .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
@@ -506,14 +621,14 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
               owl:equivalentClass [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasStorageTechnology ;
                                     owl:hasValue :InMemoryStorage
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isSuitableForSoftwareApplication ;
-                                    owl:hasValue :LowLatencySoftwareApplication
                                   ] ;
-              rdfs:subClassOf :DatabaseManagementSystem ;
-              rdfs:comment "The class of in-memory DBMSs."@en ;
-              rdfs:label "In-Memory DBMS"@en .
+              rdfs:subClassOf :DatabaseManagementSystem ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isSuitableForSoftwareApplication ;
+                                owl:hasValue [ ]
+              ] ;
+rdfs:comment "The class of in-memory DBMSs."@en ;
+rdfs:label "In-Memory DBMS"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/KeyValueDBMS
@@ -522,13 +637,17 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                     owl:onProperty :hasDataModel ;
                                     owl:hasValue :KeyValueDataModel
                                   ] ;
-              rdfs:subClassOf :DatabaseManagementSystem ;
-              rdfs:comment "The class of key-value DBMSs."@en ;
-              rdfs:label "Key-Value DBMS"@en .
+              rdfs:subClassOf :DatabaseManagementSystem .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/License
 :License rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
+:LowLatencySoftwareApplication rdf:type owl:Class ;
+                               rdfs:subClassOf :SoftwareApplication ;
+                               rdfs:label "Low-Latency Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
@@ -736,6 +855,56 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                               rdfs:label "Analytics Software Application"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesAnalyticsData
+:ApplicationThatUsesAnalyticsData rdf:type owl:NamedIndividual ,
+                                           :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesExpiringUsageData
+:ApplicationThatUsesExpiringUsageData rdf:type owl:NamedIndividual ,
+                                               :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLinkedData
+:ApplicationThatUsesLinkedData rdf:type owl:NamedIndividual ,
+                                        :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLocationData
+:ApplicationThatUsesLocationData rdf:type owl:NamedIndividual ,
+                                          :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLogData
+:ApplicationThatUsesLogData rdf:type owl:NamedIndividual ,
+                                     :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesPreferencesData
+:ApplicationThatUsesPreferencesData rdf:type owl:NamedIndividual ,
+                                             :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesRoutingData
+:ApplicationThatUsesRoutingData rdf:type owl:NamedIndividual ,
+                                         :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesSessionData
+:ApplicationThatUsesSessionData rdf:type owl:NamedIndividual ,
+                                         :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesShoppingCartData
+:ApplicationThatUsesShoppingCartData rdf:type owl:NamedIndividual ,
+                                              :SoftwareApplication .
+
+
+###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesUserProfileData
+:ApplicationThatUsesUserProfileData rdf:type owl:NamedIndividual ,
+                                             :SoftwareApplication .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
 :AsynchronousReplication rdf:type owl:NamedIndividual ,
                                   :ReplicationSynchronizationStrategy ;
@@ -796,6 +965,10 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                    rdfs:label "Expiring-Usage Data"@en .
 
 
+###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageDataData
+:ExpiringUsageDataData rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/ontologies/databases/FlexibleSchema
 :FlexibleSchema rdf:type owl:NamedIndividual ,
                          :DataSchema ;
@@ -853,12 +1026,6 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 :LogData rdf:type owl:NamedIndividual ,
                   :Data ;
          rdfs:label "Log Data"@en .
-
-
-###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
-:LowLatencySoftwareApplication rdf:type owl:NamedIndividual ,
-                                        :SoftwareApplication ;
-                               rdfs:label "Low-Latency Software Application"@en .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/MapReduce
@@ -1132,6 +1299,20 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 :TransactionGranularity
                 :Trigger
               )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ColumnFamilyDataModel
+                        :DocumentDataModel
+                        :GraphDataModel
+                        :KeyValueDataModel
+                        :ObjectOrientedDataModel
+                        :QuadDataModel
+                        :RelationalDataModel
+                        :SemistructuredDataModel
+                        :TripleDataModel
+                      )
 ] .
 
 
