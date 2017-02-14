@@ -142,6 +142,7 @@ db:MongoDB rdf:type owl:NamedIndividual ;
            db:hasDataSchema db:Flexible ;
            db:hasLicense db:OpenSource ;
            db:supportsIndexing "true"^^xsd:boolean ;
+		   db:hasReplicationProtocol db:PeerToPeerAsynchronousReplication;
            db:supportsTyping "true"^^xsd:boolean ;
            rdfs:label "MongoDB" .
 
@@ -153,6 +154,7 @@ db:MySQL rdf:type owl:NamedIndividual ;
          db:hasLicense db:OpenSource ;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "true"^^xsd:boolean ;
+		 db:hasReplicationProtocol db:MasterSlaveAsynchronousReplication;
          rdfs:label "MySQL" .
 
 
@@ -171,6 +173,7 @@ db:MapRDB rdf:type owl:NamedIndividual ;
          db:hasDataModel db:ColumnFamilyDataModel ;
          db:hasDataSchema db:Flexible ;
          db:hasLicense db:Commercial ;
+		 db:hasReplicationProtocol db:MasterSlaveAsynchronousReplication;
          rdfs:label "MapR-DB" .
 
 
@@ -205,6 +208,7 @@ db:RiakKV rdf:type owl:NamedIndividual ;
           db:hasLicense db:OpenSource ;
           db:supportsIndexing "false"^^xsd:boolean ;
           db:supportsTyping "true"^^xsd:boolean ;
+		  db:hasReplicationProtocol db:PeerToPeerAsynchronousReplication;
           rdfs:label "RiakKV" .
 
 
