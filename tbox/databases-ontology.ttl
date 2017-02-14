@@ -1303,6 +1303,19 @@ rdfs:label "In-Memory DBMS"@en .
 
 
 [ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ACID
+                        :Aggregation
+                        :MultiOperationTransaction
+                        :OLAP
+                        :OLTP
+                        :QueryAgainstVaryingAggregateDataStructure
+                        :QueryByData
+                        :SetRelated
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :ColumnFamilyDataModel
                         :DocumentDataModel
                         :GraphDataModel
@@ -1312,6 +1325,52 @@ rdfs:label "In-Memory DBMS"@en .
                         :RelationalDataModel
                         :SemistructuredDataModel
                         :TripleDataModel
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ColumnOriented
+                        :RowOriented
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ConfigurableConsistency
+                        :EventualConsistency
+                        :StrongConsistency
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :FlexibleSchema
+                        :RigidSchema
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :HashPartitioning
+                        :ListPartitioning
+                        :RangePartitioning
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :InMemoryStorage
+                        :OnDiskStorage
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :MasterSlaveAsynchronousReplication
+                        :MasterSlaveSynchronousReplication
+                        :PeerToPeerAsynchronousReplication
+                        :PeerToPeerSynchronousReplication
                       )
 ] .
 
