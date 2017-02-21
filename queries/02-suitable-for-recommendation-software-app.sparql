@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbp: <http://dbpedia.org/property/> 
+PREFIX dbr: <http://dbpedia.org/resource/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX db: <http://www.semanticweb.org/ontologies/databases/> 
+
+
+
+
+SELECT ?db ?label
+WHERE { 
+  		?db db:isSuitableForSoftwareApplication db:RecommendationSoftwareApplication .
+  		?db db:hasDataModel db:TripleDataModel .
+  		?db db:hasLicense db:OpenSource .
+  		?db db:supportsTyping "true"^^xsd:boolean .
+  		?db rdfs:label ?label
+      }	

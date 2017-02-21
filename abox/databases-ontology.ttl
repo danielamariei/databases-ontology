@@ -1,5 +1,5 @@
-@prefix : <http://www.semanticweb.org/ontologies/databases/abox#> .
-@prefix db: <http://www.semanticweb.org/ontologies/databases/> .
+@prefix : <http://www.semanticweb.org/ontologies/databases/abox/> .
+@prefix db: <http://www.semanticweb.org/ontologies/databases/tbox> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -13,9 +13,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
-@base <http://www.semanticweb.org/ontologies/databases/abox> .
+@base <http://www.semanticweb.org/ontologies/databases/abox/> .
 
-<http://www.semanticweb.org/ontologies/databases/abox> rdf:type owl:Ontology ;
+<http://www.semanticweb.org/ontologies/databases/abox/> rdf:type owl:Ontology ;
                                                         dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
                                                         rdfs:label "Databases Ontology"@en ;
                                                         rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
@@ -36,7 +36,6 @@
 
 ###  http://dbpedia.org/resource/Oracle_Database
 dbr:Oracle_Database rdf:type owl:NamedIndividual ;
-                    owl:sameAs db:Oracle ;
                     db:hasDataModel db:RelationalDataModel ;
                     db:hasDataSchema db:Rigid ;
                     db:hasLicense db:Commercial ;
@@ -49,6 +48,7 @@ dbr:Oracle_Database rdf:type owl:NamedIndividual ;
 db:ApacheJena rdf:type owl:NamedIndividual ;
               db:hasDataModel db:TripleDataModel ;
               db:hasDataSchema db:Flexible ;
+			  
               db:hasLicense db:OpenSource ;
               db:supportsIndexing "true"^^xsd:boolean ;
               db:supportsTyping "true"^^xsd:boolean ;
@@ -60,6 +60,7 @@ db:Cassandra rdf:type owl:NamedIndividual ;
              db:hasDataModel db:ColumnFamilyDataModel ;
              db:hasDataSchema db:Flexible ;
              db:hasLicense db:OpenSource ;
+			 owl:sameAs dbr:Apache_Cassandra;
              db:supportsIndexing "true"^^xsd:boolean ;
              db:supportsTyping "true"^^xsd:boolean ;
              rdfs:label "Cassandra" .
@@ -80,6 +81,7 @@ db:DB2 rdf:type owl:NamedIndividual ;
        db:hasDataModel db:RelationalDataModel ;
        db:hasDataSchema db:Rigid ;
        db:hasLicense db:Commercial ;
+	   owl:sameAs dbr:IBM_DB2;
        db:supportsIndexing "true"^^xsd:boolean ;
        db:supportsTyping "true"^^xsd:boolean ;
        rdfs:label "DB2" .
@@ -100,6 +102,7 @@ db:HBase rdf:type owl:NamedIndividual ;
          db:hasDataModel db:ColumnFamilyDataModel ;
          db:hasDataSchema db:Flexible ;
          db:hasLicense db:OpenSource ;
+		 owl:sameAs dbr:Apache_HBase;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "false"^^xsd:boolean ;
          rdfs:label "HBase" .
@@ -141,6 +144,7 @@ db:MongoDB rdf:type owl:NamedIndividual ;
            db:hasDataModel db:DocumentDataModel ;
            db:hasDataSchema db:Flexible ;
            db:hasLicense db:OpenSource ;
+		   owl:sameAs dbr:MongoDB;
            db:supportsIndexing "true"^^xsd:boolean ;
 		   db:hasReplicationProtocol db:PeerToPeerAsynchronousReplication;
            db:supportsTyping "true"^^xsd:boolean ;
@@ -152,6 +156,7 @@ db:MySQL rdf:type owl:NamedIndividual ;
          db:hasDataModel db:RelationalDataModel ;
          db:hasDataSchema db:Rigid ;
          db:hasLicense db:OpenSource ;
+		 owl:sameAs dbr:MySQL ;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "true"^^xsd:boolean ;
 		 db:hasReplicationProtocol db:MasterSlaveAsynchronousReplication;
@@ -164,6 +169,7 @@ db:Neo4j rdf:type owl:NamedIndividual ;
          db:hasDataSchema db:Flexible ;
          db:hasLicense db:Commercial ,
                        db:OpenSource ;
+					   owl:sameAs dbr:Neo4j;
          db:supportsIndexing "true"^^xsd:boolean ;
          db:supportsTyping "true"^^xsd:boolean ;
          rdfs:label "Neo4j" .
@@ -177,8 +183,6 @@ db:MapRDB rdf:type owl:NamedIndividual ;
          rdfs:label "MapR-DB" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Oracle
-db:Oracle rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/ontologies/databases/RavenDB

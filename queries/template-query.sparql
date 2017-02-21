@@ -5,8 +5,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbo: <http://dbpedia.org/ontology/> 
 PREFIX dbp: <http://dbpedia.org/property/> 
 PREFIX dbr: <http://dbpedia.org/resource/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
 PREFIX db: <http://www.semanticweb.org/ontologies/databases/> 
-
 
 SELECT ?subject ?predicate ?object 
 	WHERE { ?subject ?predicate ?object . }
@@ -15,6 +15,13 @@ SELECT ?subject ?predicate ?object
 SELECT ?db 
 	WHERE { ?db db:hasDataModel db:KeyValueDataModel . }
 	
+	
+SELECT ?db ?license
+WHERE { 
+  ?db rdf:type db:KeyValueDBMS . 
+  ?db db:hasLicense ?license .
+
+}	
 SELECT ?db 
 	WHERE { ?db a db:SoftwareApplication . }
 	
