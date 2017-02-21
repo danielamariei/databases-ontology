@@ -1,5 +1,5 @@
 @prefix : <http://www.semanticweb.org/ontologies/databases/abox/> .
-@prefix db: <http://www.semanticweb.org/ontologies/databases/tbox> .
+@prefix db: <http://www.semanticweb.org/ontologies/databases/tbox/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
