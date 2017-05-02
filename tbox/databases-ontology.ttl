@@ -16,14 +16,14 @@
 @base <http://www.semanticweb.org/ontologies/databases/tbox/> .
 
 <http://www.semanticweb.org/ontologies/databases/tbox/> rdf:type owl:Ontology ;
-                                                    dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
-                                                    rdfs:label "Databases Ontology"@en ;
-                                                    rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ,
-                                                                             "***, Pramod J. Sadalage and Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. Addison-Wesley Professional, 1st edition, 2012."@en ;
-                                                    dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
-                                                    dc:title "Databases Ontology"@en ;
-                                                    dc:creator "Daniel Amariei"@en .
+                                                         dc:bibliographicCitation "***, Dr. Sabin-Corneliu Buraga, Web Applications Development, (RO) http://profs.info.uaic.ro/~busaco/teach/courses/wade/index.html/, UAIC, FII."@en ;
+                                                         rdfs:label "Databases Ontology"@en ;
+                                                         rdfs:comment "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                         dc:bibliographicCitation "***, W3C, http://www.w3.org/2001/sw/"@en ,
+                                                                                  "***, Pramod J. Sadalage and Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. Addison-Wesley Professional, 1st edition, 2012."@en ;
+                                                         dc:description "The purpose of this ontology is to create the common conceptual framework for 'talking' about databases and/or related concepts."@en ;
+                                                         dc:title "Databases Ontology"@en ;
+                                                         dc:creator "Daniel Amariei"@en .
 
 #################################################################
 #    Annotation properties
@@ -45,7 +45,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/hasConcurrencyControlMechanism
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasConcurrencyControlMechanism
 :hasConcurrencyControlMechanism rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf owl:topObjectProperty ;
                                 rdfs:domain :DatabaseManagementSystem ;
@@ -54,7 +54,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                 rdfs:label "Has Concurrency Control Mechanism"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasConsistencyModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasConsistencyModel
 :hasConsistencyModel rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      rdfs:domain :DatabaseManagementSystem ;
@@ -63,7 +63,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                      rdfs:label "Has Consistency Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasDataModel
 :hasDataModel rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :DatabaseManagementSystem ;
@@ -72,7 +72,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
               rdfs:label "Has Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataPartitioningStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasDataPartitioningStrategy
 :hasDataPartitioningStrategy rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf owl:topObjectProperty ;
                              rdfs:domain :DatabaseManagementSystem ;
@@ -81,7 +81,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                              rdfs:label "Has Partitioning Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataProcessingModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasDataProcessingModel
 :hasDataProcessingModel rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :DatabaseManagementSystem ;
@@ -90,7 +90,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                         rdfs:label "Has Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDataSchema
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasDataSchema
 :hasDataSchema rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdf:type owl:FunctionalProperty ;
@@ -100,7 +100,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                rdfs:label "Has Data Schema"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasDeveloper
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasDeveloper
 :hasDeveloper rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :DatabaseManagementSystem ;
@@ -108,7 +108,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
               rdfs:label "Has Developer"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasImplementationProgrammingLanguage
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasImplementationProgrammingLanguage
 :hasImplementationProgrammingLanguage rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf owl:topObjectProperty ;
                                       rdfs:domain :DatabaseManagementSystem ;
@@ -117,7 +117,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                       rdfs:label "Has Implementation Programming Language"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasLicense
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasLicense
 :hasLicense rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :DatabaseManagementSystem ;
@@ -126,7 +126,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
             rdfs:label "Has License"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasReplicationConfigurationStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasReplicationConfigurationStrategy
 :hasReplicationConfigurationStrategy rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf owl:topObjectProperty ;
                                      rdfs:domain :DatabaseManagementSystem ;
@@ -135,7 +135,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                      rdfs:label "Has Replication Configuration Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasReplicationProtocol
 :hasReplicationProtocol rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :DatabaseManagementSystem ;
@@ -144,7 +144,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                         rdfs:label "Has Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasReplicationSynchronizationStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasReplicationSynchronizationStrategy
 :hasReplicationSynchronizationStrategy rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
                                        rdfs:domain :DatabaseManagementSystem ;
@@ -153,14 +153,14 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                        rdfs:label "Has Replication Synchronization Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasSoftwareLicense
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasSoftwareLicense
 :hasSoftwareLicense rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasLicense ;
                     rdfs:comment "This property specifies the licensing of a particular software product."@en ;
                     rdfs:label "Has Software License"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasStorageModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasStorageModel
 :hasStorageModel rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :DatabaseManagementSystem ;
@@ -169,7 +169,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                  rdfs:label "Has Storage Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasStorageTechnology
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasStorageTechnology
 :hasStorageTechnology rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain :DatabaseManagementSystem ;
@@ -178,7 +178,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                       rdfs:label "Has Storage Technology"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasTransactionGranularity
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasTransactionGranularity
 :hasTransactionGranularity rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain :DatabaseManagementSystem ;
@@ -187,7 +187,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                            rdfs:label "Has Transaction Granularity"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/isNotSuitableForSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/isNotSuitableForSoftwareApplication
 :isNotSuitableForSoftwareApplication rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf owl:topObjectProperty ;
                                      rdfs:domain :DatabaseManagementSystem ;
@@ -196,7 +196,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                      rdfs:label "Is Not Suitable for Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/isSuitableForSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/isSuitableForSoftwareApplication
 :isSuitableForSoftwareApplication rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
                                   rdfs:domain :DatabaseManagementSystem ;
@@ -205,7 +205,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                                   rdfs:label "Is Suitable for Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsOperatingSystem
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsOperatingSystem
 :supportsOperatingSystem rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :DatabaseManagementSystem ;
@@ -214,7 +214,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                          rdfs:label "Supports Operating System"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsPlatform
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsPlatform
 :supportsPlatform rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :DatabaseManagementSystem ;
@@ -222,7 +222,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                   rdfs:label "Supports Platform"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsProgrammingLanguage
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsProgrammingLanguage
 :supportsProgrammingLanguage rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf owl:topObjectProperty ;
                              rdfs:domain :DatabaseManagementSystem ;
@@ -231,7 +231,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                              rdfs:label "Supports Programming Language"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsQueryLanguage
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsQueryLanguage
 :supportsQueryLanguage rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        rdfs:domain :DatabaseManagementSystem ;
@@ -239,7 +239,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                        rdfs:label "Supports Query Language"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/usesData
+###  http://www.semanticweb.org/ontologies/databases/tbox/usesData
 :usesData rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :SoftwareApplication ;
@@ -248,7 +248,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
           rdfs:label "Uses Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/usesOperation
+###  http://www.semanticweb.org/ontologies/databases/tbox/usesOperation
 :usesOperation rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :SoftwareApplication ;
@@ -261,7 +261,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/hasCurrentVersion
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasCurrentVersion
 :hasCurrentVersion rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdf:type owl:FunctionalProperty ;
@@ -271,7 +271,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                    rdfs:label "Has Current Version"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasCurrentVersionReleaseDate
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasCurrentVersionReleaseDate
 :hasCurrentVersionReleaseDate rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
                               rdf:type owl:FunctionalProperty ;
@@ -281,7 +281,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                               rdfs:label "Has Current Version Release Date"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasInitialVersionReleaseDate
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasInitialVersionReleaseDate
 :hasInitialVersionReleaseDate rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
                               rdf:type owl:FunctionalProperty ;
@@ -291,7 +291,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                               rdfs:label "Has Initial Version Release Date"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasPriorVersion
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasPriorVersion
 :hasPriorVersion rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdf:type owl:FunctionalProperty ;
@@ -301,7 +301,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                  rdfs:label "Has Prior Version"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/hasWebsite
+###  http://www.semanticweb.org/ontologies/databases/tbox/hasWebsite
 :hasWebsite rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :DatabaseManagementSystem ;
@@ -310,7 +310,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
             rdfs:label "Has Website"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/isOperatingSystemIndependent
+###  http://www.semanticweb.org/ontologies/databases/tbox/isOperatingSystemIndependent
 :isOperatingSystemIndependent rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
                               rdf:type owl:FunctionalProperty ;
@@ -320,7 +320,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                               rdfs:label "Is Operating System Independent"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/isPlatformIndependent
+###  http://www.semanticweb.org/ontologies/databases/tbox/isPlatformIndependent
 :isPlatformIndependent rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdf:type owl:FunctionalProperty ;
@@ -330,7 +330,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                        rdfs:label "Is Platform Independent"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsIndexing
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsIndexing
 :supportsIndexing rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdf:type owl:FunctionalProperty ;
@@ -340,7 +340,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                   rdfs:label "Supports Indexing"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsMapReduce
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsMapReduce
 :supportsMapReduce rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdf:type owl:FunctionalProperty ;
@@ -350,7 +350,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                    rdfs:label "Supports MapReduce"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsReplication
 :supportsReplication rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdf:type owl:FunctionalProperty ;
@@ -360,7 +360,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                      rdfs:label "Supports Replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsTransactions
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsTransactions
 :supportsTransactions rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdf:type owl:FunctionalProperty ;
@@ -370,7 +370,7 @@ rdfs:commnet rdf:type owl:AnnotationProperty .
                       rdfs:label "Supports Transactions"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/supportsTyping
+###  http://www.semanticweb.org/ontologies/databases/tbox/supportsTyping
 :supportsTyping rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdf:type owl:FunctionalProperty ;
@@ -398,7 +398,7 @@ yago:WikicatDatabaseManagementSystems rdf:type owl:Class ;
 dbo:ProgrammingLanguage rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesAnalyticsData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesAnalyticsData
 :ApplicationThatUsesAnalyticsData rdf:type owl:Class ;
                                   owl:equivalentClass [ rdf:type owl:Restriction ;
                                                         owl:onProperty :usesData ;
@@ -407,7 +407,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                   rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesExpiringUsageData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesExpiringUsageData
 :ApplicationThatUsesExpiringUsageData rdf:type owl:Class ;
                                       owl:equivalentClass [ rdf:type owl:Restriction ;
                                                             owl:onProperty :usesData ;
@@ -416,7 +416,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                       rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLinkedData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLinkedData
 :ApplicationThatUsesLinkedData rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty :usesData ;
@@ -425,7 +425,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLocationData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLocationData
 :ApplicationThatUsesLocationData rdf:type owl:Class ;
                                  owl:equivalentClass [ rdf:type owl:Restriction ;
                                                        owl:onProperty :usesData ;
@@ -434,7 +434,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                  rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLogData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLogData
 :ApplicationThatUsesLogData rdf:type owl:Class ;
                             owl:equivalentClass [ rdf:type owl:Restriction ;
                                                   owl:onProperty :usesData ;
@@ -443,7 +443,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                             rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesPreferencesData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesPreferencesData
 :ApplicationThatUsesPreferencesData rdf:type owl:Class ;
                                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                                           owl:onProperty :usesData ;
@@ -452,7 +452,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                     rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesRoutingData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesRoutingData
 :ApplicationThatUsesRoutingData rdf:type owl:Class ;
                                 owl:equivalentClass [ rdf:type owl:Restriction ;
                                                       owl:onProperty :usesData ;
@@ -461,7 +461,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                 rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesSessionData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesSessionData
 :ApplicationThatUsesSessionData rdf:type owl:Class ;
                                 owl:equivalentClass [ rdf:type owl:Restriction ;
                                                       owl:onProperty :usesData ;
@@ -470,7 +470,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                 rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesShoppingCartData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesShoppingCartData
 :ApplicationThatUsesShoppingCartData rdf:type owl:Class ;
                                      owl:equivalentClass [ rdf:type owl:Restriction ;
                                                            owl:onProperty :usesData ;
@@ -479,7 +479,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                      rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesUserProfileData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesUserProfileData
 :ApplicationThatUsesUserProfileData rdf:type owl:Class ;
                                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                                           owl:onProperty :usesData ;
@@ -488,27 +488,27 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                     rdfs:subClassOf :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/AsynchronousReplicationProtocol
 :AsynchronousReplicationProtocol rdf:type owl:Class ;
                                  rdfs:subClassOf :ReplicationProtocol ;
                                  rdfs:comment "The class of asynchronous replication protocols."@en ;
                                  rdfs:label "Asynchronous Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/BatchProcessingModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/BatchProcessingModel
 :BatchProcessingModel rdf:type owl:Class ;
                       rdfs:subClassOf :DataProcessingModel ;
                       rdfs:comment "The class of batch processing models."@en ;
                       rdfs:label "Batch Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Caching
+###  http://www.semanticweb.org/ontologies/databases/tbox/Caching
 :Caching rdf:type owl:Class ;
          rdfs:comment "The caching concept."@en ;
          rdfs:label "Caching"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/ColumnFamilyDBMS
 :ColumnFamilyDBMS rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasDataModel ;
@@ -519,86 +519,86 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                   rdfs:label "Column Family DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Concurrency
+###  http://www.semanticweb.org/ontologies/databases/tbox/Concurrency
 :Concurrency rdf:type owl:Class ;
              rdfs:comment "The concurrency concept."@en ;
              rdfs:label "Concurrency"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ConcurrencyControlMechanism
+###  http://www.semanticweb.org/ontologies/databases/tbox/ConcurrencyControlMechanism
 :ConcurrencyControlMechanism rdf:type owl:Class ;
                              rdfs:comment "The class of concurrency control mechanisms."@en ;
                              rdfs:label "Concurrency Control Mechanism"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Consistency
+###  http://www.semanticweb.org/ontologies/databases/tbox/Consistency
 :Consistency rdf:type owl:Class ;
              rdfs:comment "The consistency concept."@en ;
              rdfs:label "Consistency"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ConsistencyModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/ConsistencyModel
 :ConsistencyModel rdf:type owl:Class ;
                   rdfs:comment "The class of conistency models."@en ;
                   rdfs:label "Consistency Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Data
+###  http://www.semanticweb.org/ontologies/databases/tbox/Data
 :Data rdf:type owl:Class ;
       rdfs:comment "The class of data entities."@en ;
       rdfs:label "Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/DataModel
 :DataModel rdf:type owl:Class ;
            rdfs:comment "The class of data models."@en ;
            rdfs:label "Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DataPartitioning
+###  http://www.semanticweb.org/ontologies/databases/tbox/DataPartitioning
 :DataPartitioning rdf:type owl:Class ;
                   rdfs:comment "The data partitoning concept."@en ;
                   rdfs:label "Data Partitioning"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DataPartitioningStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/DataPartitioningStrategy
 :DataPartitioningStrategy rdf:type owl:Class ;
                           rdfs:comment "The class of data partitioning strategies."@en ;
                           rdfs:label "Data Partitioning Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DataProcessingModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/DataProcessingModel
 :DataProcessingModel rdf:type owl:Class ;
                      rdfs:comment "The class of data processing models."@en ;
                      rdfs:label "Data Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DataSchema
+###  http://www.semanticweb.org/ontologies/databases/tbox/DataSchema
 :DataSchema rdf:type owl:Class ;
             rdfs:comment "The class of data schemas (e.g., rigid schema, flexible schema, etc.)."@en ;
             rdfs:label "Data Schema"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Database
+###  http://www.semanticweb.org/ontologies/databases/tbox/Database
 :Database rdf:type owl:Class ;
           rdfs:comment "The concept of databse."@en ;
           rdfs:label "Database"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DatabaseManagementSystem
+###  http://www.semanticweb.org/ontologies/databases/tbox/DatabaseManagementSystem
 :DatabaseManagementSystem rdf:type owl:Class ;
                           rdfs:comment "The class of Database Management Systems (DBMSs)."@en ;
                           rdfs:label "Database Management System (DBMS)"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DistributedDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/DistributedDBMS
 :DistributedDBMS rdf:type owl:Class ;
                  rdfs:subClassOf :DatabaseManagementSystem ;
                  rdfs:comment "The class of distributed DBMSs."@en ;
                  rdfs:label "Distributed DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DocumentDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/DocumentDBMS
 :DocumentDBMS rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasDataModel ;
@@ -609,13 +609,13 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
               rdfs:label "Document DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Durability
+###  http://www.semanticweb.org/ontologies/databases/tbox/Durability
 :Durability rdf:type owl:Class ;
             rdfs:comment "The durability concept."@en ;
             rdfs:label "Durability"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/GraphDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/GraphDBMS
 :GraphDBMS rdf:type owl:Class ;
            owl:equivalentClass [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasDataModel ;
@@ -626,7 +626,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
            rdfs:label "Graph DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/InMemoryDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/InMemoryDBMS
 :InMemoryDBMS rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasStorageTechnology ;
@@ -636,7 +636,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
               rdfs:label "In-Memory DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/KeyValueDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/KeyValueDBMS
 :KeyValueDBMS rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasDataModel ;
@@ -645,24 +645,24 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
               rdfs:subClassOf :DatabaseManagementSystem .
 
 
-###  http://www.semanticweb.org/ontologies/databases/License
+###  http://www.semanticweb.org/ontologies/databases/tbox/License
 :License rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/LowLatencySoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/LowLatencySoftwareApplication
 :LowLatencySoftwareApplication rdf:type owl:Class ;
                                rdfs:subClassOf :SoftwareApplication ;
                                rdfs:label "Low-Latency Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/MasterSlaveReplicationProtocol
 :MasterSlaveReplicationProtocol rdf:type owl:Class ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of master-slave replication protocols."@en ;
                                 rdfs:label "Master-Slave Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MultiModelDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/MultiModelDBMS
 :MultiModelDBMS rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasDataModel ;
@@ -674,7 +674,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 rdfs:label "Multi-Model DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ObjectOrientedDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/ObjectOrientedDBMS
 :ObjectOrientedDBMS rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasDataModel ;
@@ -683,31 +683,31 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                     rdfs:subClassOf :DatabaseManagementSystem .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OnDiskDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/OnDiskDBMS
 :OnDiskDBMS rdf:type owl:Class ;
             rdfs:subClassOf :DatabaseManagementSystem ;
             rdfs:comment "The class of on-disk DBMSs."@en ;
             rdfs:label "On-Disk DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OperatingSystem
+###  http://www.semanticweb.org/ontologies/databases/tbox/OperatingSystem
 :OperatingSystem rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Operation
+###  http://www.semanticweb.org/ontologies/databases/tbox/Operation
 :Operation rdf:type owl:Class ;
            rdfs:comment "The class of operation types (e.g., OLTP, OLAP, query, transaction, etc.)."@en ;
            rdfs:label "Operation"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/PeerToPeerReplicationProtocol
 :PeerToPeerReplicationProtocol rdf:type owl:Class ;
                                rdfs:subClassOf :ReplicationProtocol ;
                                rdfs:comment "The class of peer-to-peer replication protocols."@en ;
                                rdfs:label "Peer-to-Peer Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/QuadStoreDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/QuadStoreDBMS
 :QuadStoreDBMS rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasDataModel ;
@@ -718,7 +718,7 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                rdfs:label "Quad Store DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RelationalDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/RelationalDBMS
 :RelationalDBMS rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasDataModel ;
@@ -729,34 +729,34 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                 rdfs:label "Relational DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Replication
+###  http://www.semanticweb.org/ontologies/databases/tbox/Replication
 :Replication rdf:type owl:Class ;
              rdfs:comment "The concept of replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ReplicationConfigurationStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/ReplicationConfigurationStrategy
 :ReplicationConfigurationStrategy rdf:type owl:Class ;
                                   rdfs:comment "The class of replication configuration strategies."@en ;
                                   rdfs:label "Replication Configuration Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ReplicationFactor
+###  http://www.semanticweb.org/ontologies/databases/tbox/ReplicationFactor
 :ReplicationFactor rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/ReplicationProtocol
 :ReplicationProtocol rdf:type owl:Class ;
                      rdfs:comment "The class of replication protocols."@en ;
                      rdfs:label "Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ReplicationSynchronizationStrategy
+###  http://www.semanticweb.org/ontologies/databases/tbox/ReplicationSynchronizationStrategy
 :ReplicationSynchronizationStrategy rdf:type owl:Class ;
                                     rdfs:comment "The class of replication synchronization strategies."@en ;
                                     rdfs:label "Replication Synchronization Strategy"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SemistructuredDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/SemistructuredDBMS
 :SemistructuredDBMS rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasDataModel ;
@@ -767,58 +767,58 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                     rdfs:label "Semistructured DBMS"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/SoftwareApplication
 :SoftwareApplication rdf:type owl:Class ;
                      rdfs:subClassOf :SoftwareProduct ;
                      rdfs:comment "The class of software applications."@en ;
                      rdfs:label "Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SoftwareLicense
+###  http://www.semanticweb.org/ontologies/databases/tbox/SoftwareLicense
 :SoftwareLicense rdf:type owl:Class ;
                  rdfs:subClassOf :License .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SoftwareProduct
+###  http://www.semanticweb.org/ontologies/databases/tbox/SoftwareProduct
 :SoftwareProduct rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/StorageModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/StorageModel
 :StorageModel rdf:type owl:Class ;
               rdfs:comment "The class of storage models"@en ;
               rdfs:label "Storage Model" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/StorageTechnology
+###  http://www.semanticweb.org/ontologies/databases/tbox/StorageTechnology
 :StorageTechnology rdf:type owl:Class ;
                    rdfs:comment "The class of storage technologies"@en ;
                    rdfs:label "Storage Technology" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/StreamProcessingModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/StreamProcessingModel
 :StreamProcessingModel rdf:type owl:Class ;
                        rdfs:subClassOf :DataProcessingModel ;
                        rdfs:comment "The class of stream processing models."@en ;
                        rdfs:label "Stream Processing Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SynchronousReplicationProtocol
+###  http://www.semanticweb.org/ontologies/databases/tbox/SynchronousReplicationProtocol
 :SynchronousReplicationProtocol rdf:type owl:Class ;
                                 rdfs:subClassOf :ReplicationProtocol ;
                                 rdfs:comment "The class of synchronous replication protocols."@en ;
                                 rdfs:label "Synchronous Replication Protocol"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/TransactionGranularity
+###  http://www.semanticweb.org/ontologies/databases/tbox/TransactionGranularity
 :TransactionGranularity rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Trigger
+###  http://www.semanticweb.org/ontologies/databases/tbox/Trigger
 :Trigger rdf:type owl:Class ;
          rdfs:comment "The concept of trigger"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/TripleStoreDBMS
+###  http://www.semanticweb.org/ontologies/databases/tbox/TripleStoreDBMS
 :TripleStoreDBMS rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasDataModel ;
@@ -833,213 +833,213 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/databases/ACID
+###  http://www.semanticweb.org/ontologies/databases/tbox/ACID
 :ACID rdf:type owl:NamedIndividual ,
                :Operation ;
       rdfs:comment "Atomicity, Consistency, Isolation, Durability"@en ;
       rdfs:label "ACID"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Aggregation
+###  http://www.semanticweb.org/ontologies/databases/tbox/Aggregation
 :Aggregation rdf:type owl:NamedIndividual ,
                       :Operation ;
              rdfs:comment "An operations that performs aggregations (e.g., AVG, SUM, COUNT, etc.)"@en ;
              rdfs:label "Aggregation"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/AnalyticsData
+###  http://www.semanticweb.org/ontologies/databases/tbox/AnalyticsData
 :AnalyticsData rdf:type owl:NamedIndividual ,
                         :Data ;
                rdfs:label "Analytics Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/AnalyticsSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/AnalyticsSoftwareApplication
 :AnalyticsSoftwareApplication rdf:type owl:NamedIndividual ,
                                        :SoftwareApplication ;
                               rdfs:comment "The class of analytics software applications."@en ;
                               rdfs:label "Analytics Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesAnalyticsData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesAnalyticsData
 :ApplicationThatUsesAnalyticsData rdf:type owl:NamedIndividual ,
                                            :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesExpiringUsageData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesExpiringUsageData
 :ApplicationThatUsesExpiringUsageData rdf:type owl:NamedIndividual ,
                                                :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLinkedData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLinkedData
 :ApplicationThatUsesLinkedData rdf:type owl:NamedIndividual ,
                                         :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLocationData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLocationData
 :ApplicationThatUsesLocationData rdf:type owl:NamedIndividual ,
                                           :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesLogData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesLogData
 :ApplicationThatUsesLogData rdf:type owl:NamedIndividual ,
                                      :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesPreferencesData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesPreferencesData
 :ApplicationThatUsesPreferencesData rdf:type owl:NamedIndividual ,
                                              :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesRoutingData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesRoutingData
 :ApplicationThatUsesRoutingData rdf:type owl:NamedIndividual ,
                                          :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesSessionData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesSessionData
 :ApplicationThatUsesSessionData rdf:type owl:NamedIndividual ,
                                          :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesShoppingCartData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesShoppingCartData
 :ApplicationThatUsesShoppingCartData rdf:type owl:NamedIndividual ,
                                               :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ApplicationThatUsesUserProfileData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ApplicationThatUsesUserProfileData
 :ApplicationThatUsesUserProfileData rdf:type owl:NamedIndividual ,
                                              :SoftwareApplication .
 
 
-###  http://www.semanticweb.org/ontologies/databases/AsynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/AsynchronousReplication
 :AsynchronousReplication rdf:type owl:NamedIndividual ,
                                   :ReplicationSynchronizationStrategy ;
                          rdfs:label "Asynchronous Replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/CMSSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/CMSSoftwareApplication
 :CMSSoftwareApplication rdf:type owl:NamedIndividual ,
                                  :SoftwareApplication ;
                         rdfs:label "CMS Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ColumnFamilyDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/ColumnFamilyDataModel
 :ColumnFamilyDataModel rdf:type owl:NamedIndividual ,
                                 :DataModel ;
                        rdfs:label "Column-Family Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ColumnOriented
+###  http://www.semanticweb.org/ontologies/databases/tbox/ColumnOriented
 :ColumnOriented rdf:type owl:NamedIndividual ,
                          :StorageModel ;
                 rdfs:label "Column-Oriented"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Commercial
+###  http://www.semanticweb.org/ontologies/databases/tbox/Commercial
 :Commercial rdf:type owl:NamedIndividual ,
                      :SoftwareLicense .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ConfigurableConsistency
+###  http://www.semanticweb.org/ontologies/databases/tbox/ConfigurableConsistency
 :ConfigurableConsistency rdf:type owl:NamedIndividual ,
                                   :ConsistencyModel ;
                          rdfs:label "Configurable Consistency"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/DocumentDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/DocumentDataModel
 :DocumentDataModel rdf:type owl:NamedIndividual ,
                             :DataModel ;
                    rdfs:label "Document Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/E-CommerceSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/E-CommerceSoftwareApplication
 :E-CommerceSoftwareApplication rdf:type owl:NamedIndividual ,
                                         :SoftwareApplication ;
                                rdfs:label "E-Commerce Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/EventualConsistency
+###  http://www.semanticweb.org/ontologies/databases/tbox/EventualConsistency
 :EventualConsistency rdf:type owl:NamedIndividual ,
                               :ConsistencyModel ;
                      rdfs:label "Eventual Consistency"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ExpiringUsageData
 :ExpiringUsageData rdf:type owl:NamedIndividual ,
                             :Data ;
                    rdfs:comment "Data that expires after a certain ammount of time and needs to be deleted."@en ;
                    rdfs:label "Expiring-Usage Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ExpiringUsageDataData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ExpiringUsageDataData
 :ExpiringUsageDataData rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/ontologies/databases/FlexibleSchema
+###  http://www.semanticweb.org/ontologies/databases/tbox/FlexibleSchema
 :FlexibleSchema rdf:type owl:NamedIndividual ,
                          :DataSchema ;
                 rdfs:label "Flexible Schema"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/Free
+###  http://www.semanticweb.org/ontologies/databases/tbox/Free
 :Free rdf:type owl:NamedIndividual ,
                :SoftwareLicense .
 
 
-###  http://www.semanticweb.org/ontologies/databases/GraphDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/GraphDataModel
 :GraphDataModel rdf:type owl:NamedIndividual ,
                          :DataModel ;
                 rdfs:label "Graph Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/HashPartitioning
+###  http://www.semanticweb.org/ontologies/databases/tbox/HashPartitioning
 :HashPartitioning rdf:type owl:NamedIndividual ,
                            :DataPartitioningStrategy ;
                   rdfs:label "Hash Partitioning"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/InMemoryStorage
+###  http://www.semanticweb.org/ontologies/databases/tbox/InMemoryStorage
 :InMemoryStorage rdf:type owl:NamedIndividual ,
                           :StorageTechnology ;
                  rdfs:label "In-Memory Storage"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/KeyValueDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/KeyValueDataModel
 :KeyValueDataModel rdf:type owl:NamedIndividual ,
                             :DataModel ;
                    rdfs:label "Key-Value Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/LinkedData
+###  http://www.semanticweb.org/ontologies/databases/tbox/LinkedData
 :LinkedData rdf:type owl:NamedIndividual ,
                      :Data ;
             rdfs:label "Linked Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ListPartitioning
+###  http://www.semanticweb.org/ontologies/databases/tbox/ListPartitioning
 :ListPartitioning rdf:type owl:NamedIndividual ,
                            :DataPartitioningStrategy ;
                   rdfs:label "List Partitioning"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/LocationData
+###  http://www.semanticweb.org/ontologies/databases/tbox/LocationData
 :LocationData rdf:type owl:NamedIndividual ,
                        :Data ;
               rdfs:label "Location Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/LogData
+###  http://www.semanticweb.org/ontologies/databases/tbox/LogData
 :LogData rdf:type owl:NamedIndividual ,
                   :Data ;
          rdfs:label "Log Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MapReduce
+###  http://www.semanticweb.org/ontologies/databases/tbox/MapReduce
 :MapReduce rdf:type owl:NamedIndividual ,
                     :BatchProcessingModel ;
            rdfs:comment "The concept of MapReduce, a distributed, batch, data processing model."@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MasterSlaveAsynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/MasterSlaveAsynchronousReplication
 :MasterSlaveAsynchronousReplication rdf:type owl:NamedIndividual ,
                                              :AsynchronousReplicationProtocol ,
                                              :MasterSlaveReplicationProtocol ;
@@ -1047,13 +1047,13 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                     rdfs:label "Master-Slave Asynchronous Replication" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MasterSlaveReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/MasterSlaveReplication
 :MasterSlaveReplication rdf:type owl:NamedIndividual ,
                                  :ReplicationConfigurationStrategy ;
                         rdfs:label "Master-Slave Replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MasterSlaveSynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/MasterSlaveSynchronousReplication
 :MasterSlaveSynchronousReplication rdf:type owl:NamedIndividual ,
                                             :MasterSlaveReplicationProtocol ,
                                             :SynchronousReplicationProtocol ;
@@ -1061,45 +1061,45 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                    rdfs:label "Master-Slave Synchronous Replication" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/MultiOperationTransaction
+###  http://www.semanticweb.org/ontologies/databases/tbox/MultiOperationTransaction
 :MultiOperationTransaction rdf:type owl:NamedIndividual ,
                                     :Operation ;
                            rdfs:comment "A transaction that spawns multiple operations."@en ;
                            rdfs:label "Multi-Operation Transaction"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OLAP
+###  http://www.semanticweb.org/ontologies/databases/tbox/OLAP
 :OLAP rdf:type owl:NamedIndividual ,
                :Operation ;
       rdfs:comment "Online Analytical Processing"@en ;
       rdfs:label "OLAP"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OLTP
+###  http://www.semanticweb.org/ontologies/databases/tbox/OLTP
 :OLTP rdf:type owl:NamedIndividual ,
                :Operation ;
       rdfs:comment "Online Transaction Processing"@en ;
       rdfs:label "OLTP"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ObjectOrientedDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/ObjectOrientedDataModel
 :ObjectOrientedDataModel rdf:type owl:NamedIndividual ,
                                   :DataModel ;
                          rdfs:label "Object-Oriented Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OnDiskStorage
+###  http://www.semanticweb.org/ontologies/databases/tbox/OnDiskStorage
 :OnDiskStorage rdf:type owl:NamedIndividual ,
                         :StorageTechnology ;
                rdfs:label "On-Disk Storage"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/OpenSource
+###  http://www.semanticweb.org/ontologies/databases/tbox/OpenSource
 :OpenSource rdf:type owl:NamedIndividual ,
                      :SoftwareLicense .
 
 
-###  http://www.semanticweb.org/ontologies/databases/PeerToPeerAsynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/PeerToPeerAsynchronousReplication
 :PeerToPeerAsynchronousReplication rdf:type owl:NamedIndividual ,
                                             :AsynchronousReplicationProtocol ,
                                             :PeerToPeerReplicationProtocol ;
@@ -1107,13 +1107,13 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                    rdfs:label "Peer-to-Peer Asynchronous Replication" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/PeerToPeerReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/PeerToPeerReplication
 :PeerToPeerReplication rdf:type owl:NamedIndividual ,
                                 :ReplicationConfigurationStrategy ;
                        rdfs:label "Peer-to-Peer Replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/PeerToPeerSynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/PeerToPeerSynchronousReplication
 :PeerToPeerSynchronousReplication rdf:type owl:NamedIndividual ,
                                            :PeerToPeerReplicationProtocol ,
                                            :SynchronousReplicationProtocol ;
@@ -1121,118 +1121,118 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
                                   rdfs:label "Peer-to-Peer Synchronous Replication" .
 
 
-###  http://www.semanticweb.org/ontologies/databases/PreferencesData
+###  http://www.semanticweb.org/ontologies/databases/tbox/PreferencesData
 :PreferencesData rdf:type owl:NamedIndividual ,
                           :Data ;
                  rdfs:label "Preferences Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/QuadDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/QuadDataModel
 :QuadDataModel rdf:type owl:NamedIndividual ,
                         :DataModel ;
                rdfs:label "Quad Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/QueryAgainstVaryingAggregateDataStructure
+###  http://www.semanticweb.org/ontologies/databases/tbox/QueryAgainstVaryingAggregateDataStructure
 :QueryAgainstVaryingAggregateDataStructure rdf:type owl:NamedIndividual ,
                                                     :Operation ;
                                            rdfs:commnet "Queries executed againsts data that is not stored in an uniform schema."@en ;
                                            rdfs:label "Query Against Varying Aggregate Data Structure"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/QueryByData
+###  http://www.semanticweb.org/ontologies/databases/tbox/QueryByData
 :QueryByData rdf:type owl:NamedIndividual ,
                       :Operation ;
              rdfs:comment "Queries executed by the data content, not the identifying key of the data."@en ;
              rdfs:label "Query By Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RangePartitioning
+###  http://www.semanticweb.org/ontologies/databases/tbox/RangePartitioning
 :RangePartitioning rdf:type owl:NamedIndividual ,
                             :DataPartitioningStrategy ;
                    rdfs:label "Range Partitioning"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RecommendationSoftwareApplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/RecommendationSoftwareApplication
 :RecommendationSoftwareApplication rdf:type owl:NamedIndividual ,
                                             :SoftwareApplication ;
                                    rdfs:label "Recommendation Software Application"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RelationalDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/RelationalDataModel
 :RelationalDataModel rdf:type owl:NamedIndividual ,
                               :DataModel ;
                      rdfs:label "Relational Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RigidSchema
+###  http://www.semanticweb.org/ontologies/databases/tbox/RigidSchema
 :RigidSchema rdf:type owl:NamedIndividual ,
                       :DataSchema ;
              rdfs:label "Rigid Schema"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RoutingData
+###  http://www.semanticweb.org/ontologies/databases/tbox/RoutingData
 :RoutingData rdf:type owl:NamedIndividual ,
                       :Data ;
              rdfs:label "Routing Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/RowOriented
+###  http://www.semanticweb.org/ontologies/databases/tbox/RowOriented
 :RowOriented rdf:type owl:NamedIndividual ,
                       :StorageModel ;
              rdfs:label "Row-Oriented"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SemistructuredDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/SemistructuredDataModel
 :SemistructuredDataModel rdf:type owl:NamedIndividual ,
                                   :DataModel ;
                          rdfs:label "Semistructured Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SessionData
+###  http://www.semanticweb.org/ontologies/databases/tbox/SessionData
 :SessionData rdf:type owl:NamedIndividual ,
                       :Data ;
              rdfs:label "Session Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SetRelated
+###  http://www.semanticweb.org/ontologies/databases/tbox/SetRelated
 :SetRelated rdf:type owl:NamedIndividual ,
                      :Operation ;
             rdfs:comment "Set-Related Operations (e.g., Union, Intersection, etc.)"@en ;
             rdfs:label "Set-Related"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/ShoppingCartData
+###  http://www.semanticweb.org/ontologies/databases/tbox/ShoppingCartData
 :ShoppingCartData rdf:type owl:NamedIndividual ,
                            :Data ;
                   rdfs:label "Shopping-Cart Data"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SlidingWindow
+###  http://www.semanticweb.org/ontologies/databases/tbox/SlidingWindow
 :SlidingWindow rdf:type owl:NamedIndividual ,
                         :StreamProcessingModel ;
                rdfs:comment "The concept of sliding-window processing model data processing model."@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/StrongConsistency
+###  http://www.semanticweb.org/ontologies/databases/tbox/StrongConsistency
 :StrongConsistency rdf:type owl:NamedIndividual ,
                             :ConsistencyModel ;
                    rdfs:label "Strong Consistency"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/SynchronousReplication
+###  http://www.semanticweb.org/ontologies/databases/tbox/SynchronousReplication
 :SynchronousReplication rdf:type owl:NamedIndividual ,
                                  :ReplicationSynchronizationStrategy ;
                         rdfs:label "Synchronous Replication"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/TripleDataModel
+###  http://www.semanticweb.org/ontologies/databases/tbox/TripleDataModel
 :TripleDataModel rdf:type owl:NamedIndividual ,
                           :DataModel ;
                  rdfs:label "Triple Data Model"@en .
 
 
-###  http://www.semanticweb.org/ontologies/databases/UserProfileData
+###  http://www.semanticweb.org/ontologies/databases/tbox/UserProfileData
 :UserProfileData rdf:type owl:NamedIndividual ,
                           :Data ;
                  rdfs:label "User-Profile Data"@en .
@@ -1380,4 +1380,4 @@ dbo:ProgrammingLanguage rdf:type owl:Class .
 ] .
 
 
-###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
