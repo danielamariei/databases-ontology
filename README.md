@@ -17,7 +17,7 @@ The ontology can be visualized using the following tools/approaches:
 
 ### Validating the Ontology
 The ontology can be validated using the following tools/services:
-* [validate the Databases Ontology using the W3C RDF Validation Service](https://www.w3.org/RDF/Validator/rdfval?URI=https%3A%2F%2Fraw.githubusercontent.com%2Fdanielamariei%2Fdatabases-ontology%2Fmaster%2Ftbox%2Fdatabases-ontology.rdf.xml&PARSE=Parse+URI%3A+&TRIPLES_AND_GRAPH=PRINT_BOTH&FORMAT=PNG_EMBED).
+* [validate the Databases Ontology using the W3C RDF Validation Service](https://www.w3.org/RDF/Validator/rdfval?URI=https%3A%2F%2Fraw.githubusercontent.com%2Fdanielamariei%2Fdatabases-ontology%2Fmaster%2Ftbox%2Fdatabases-ontology.rdf.xml&PARSE=Parse+URI%3A+&TRIPLES_AND_GRAPH=PRINT_TRIPLES&FORMAT=PNG_EMBED).
 
 ### Bibliography
 * Web Applications Development (RO), Dr. Sabin-Corneliu Buraga, http://profs.info.uaic.ro/~busaco/teach/courses/wade/, UAIC, FII;
