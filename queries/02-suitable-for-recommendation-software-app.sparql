@@ -6,7 +6,7 @@ PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/> 
 PREFIX dbr: <http://dbpedia.org/resource/> 
 PREFIX yago: <http://dbpedia.org/class/yago/> 
-PREFIX db: <http://www.semanticweb.org/ontologies/databases/> 
+PREFIX db: <http://www.semanticweb.org/ontologies/databases/tbox/> 
 
 
 
