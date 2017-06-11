@@ -19,7 +19,7 @@ The ontology can be visualized using the following tools/approaches:
 The ontology can be validated using the following tools/services:
 * [validate the Databases Ontology using the W3C RDF Validation Service](https://www.w3.org/RDF/Validator/rdfval?URI=https%3A%2F%2Fraw.githubusercontent.com%2Fdanielamariei%2Fdatabases-ontology%2Fmaster%2Ftbox%2Fdatabases-ontology.rdf.xml&PARSE=Parse+URI%3A+&TRIPLES_AND_GRAPH=PRINT_TRIPLES&FORMAT=PNG_EMBED).
 
-### Database vs. Ontology
+### Database vs Ontology
 Database
 * Closed-world assumption -- missing information is considered false
 * No means for performing inferences/reasoning -- although Oracle has support for reasoning, but not sure how it is used internally
