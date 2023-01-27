@@ -8,6 +8,7 @@ The repository is structured as follows:
 * the [tbox](https://github.com/danielamariei/databases-ontology/blob/master/tbox/) folder contains the TBox of the ontology, serialized in various formats;
 * the [abox](https://github.com/danielamariei/databases-ontology/blob/master/abox/) folder contains the ABox of the ontology, serialized in various formats;
 * the [queries](https://github.com/danielamariei/databases-ontology/blob/master/queries/) folder contains various example queries that use the ontology.
+* the [ontology-engineerg](https://github.com/danielamariei/databases-ontology/blob/master/ontology-engineering/) folder contains the process of ontology engineering.
 
 ### Visualizing the Ontology
 The ontology can be visualized using the following tools/approaches:
